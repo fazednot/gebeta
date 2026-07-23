@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { X, CalendarDays, Users, Phone, Mail, User, MessageSquare, Loader2, CheckCircle2, AlertCircle } from 'lucide-react';
-import { supabase } from '@/lib/supabase';
+import { insertReservation } from '@/lib/sqliteDb';
 import { RESTAURANT } from '@/data/menu';
 
 interface ReservationModalProps {
@@ -57,7 +57,7 @@ export default function ReservationModal({ open, onClose }: ReservationModalProp
     setErrorMsg('');
 
     try {
-      const { error } = await supabase.from('reservations').insert({
+      await insertReservation({
         name: form.name.trim(),
         phone: form.phone.trim(),
         email: form.email.trim() || null,
@@ -67,7 +67,6 @@ export default function ReservationModal({ open, onClose }: ReservationModalProp
         notes: form.notes.trim() || null,
       });
 
-      if (error) throw error;
       setStatus('success');
     } catch (err) {
       setStatus('error');
