@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { X, CalendarDays, Users, Phone, Mail, User, MessageSquare, Loader2, CheckCircle2, AlertCircle } from 'lucide-react';
 import { insertReservation } from '@/lib/sqliteDb';
-import { sendWhatsAppNotification } from '@/lib/whatsapp';
+import { generateWhatsAppUrl } from '@/lib/whatsapp';
 import { RESTAURANT } from '@/data/menu';
 
 interface ReservationModalProps {
