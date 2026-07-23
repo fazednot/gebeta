@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { X, CalendarDays, Users, Phone, Mail, User, MessageSquare, Loader2, CheckCircle2, AlertCircle } from 'lucide-react';
 import { insertReservation } from '@/lib/sqliteDb';
+import { sendWhatsAppNotification } from '@/lib/whatsapp';
 import { RESTAURANT } from '@/data/menu';
 
 interface ReservationModalProps {
@@ -57,7 +58,7 @@ export default function ReservationModal({ open, onClose }: ReservationModalProp
     setErrorMsg('');
 
     try {
-      await insertReservation({
+      const reservationData = {
         name: form.name.trim(),
         phone: form.phone.trim(),
         email: form.email.trim() || null,
@@ -65,7 +66,14 @@ export default function ReservationModal({ open, onClose }: ReservationModalProp
         date: form.date,
         time: form.time,
         notes: form.notes.trim() || null,
-      });
+      };
+
+      await insertReservation(reservationData);
+
+      // Trigger WhatsApp notification (non-blocking)
+      sendWhatsAppNotification(reservationData).catch((err) =>
+        console.warn('CallMeBot notification background error:', err)
+      );
 
       setStatus('success');
     } catch (err) {
