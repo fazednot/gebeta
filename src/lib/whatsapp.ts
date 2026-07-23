@@ -10,7 +10,7 @@ export interface WhatsAppReservationData {
 
 export function generateWhatsAppUrl(
   data: WhatsAppReservationData,
-  restaurantPhone: string = '16125942424'
+  restaurantPhone: string = '251961052926'
 ): string {
   const cleanPhone = restaurantPhone.replace(/[^\d]/g, '');
 
