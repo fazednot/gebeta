@@ -1,4 +1,5 @@
 import initSqlJs, { Database, SqlJsStatic } from 'sql.js';
+import sqlWasmUrl from 'sql.js/dist/sql-wasm.wasm?url';
 
 export interface ReservationData {
   name: string;
@@ -26,9 +27,16 @@ export async function getSqliteDb(): Promise<Database> {
 
   initPromise = (async () => {
     if (!SQL) {
-      SQL = await initSqlJs({
-        locateFile: (file) => `/${file}`,
-      });
+      try {
+        SQL = await initSqlJs({
+          locateFile: () => sqlWasmUrl,
+        });
+      } catch (e) {
+        console.warn('Failed to load local sql-wasm.wasm via Vite, falling back to CDN:', e);
+        SQL = await initSqlJs({
+          locateFile: () => 'https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.12.0/sql-wasm.wasm',
+        });
+      }
     }
 
     const savedDbBase64 = localStorage.getItem(STORAGE_KEY);
