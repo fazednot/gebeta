@@ -1,0 +1,248 @@
+{
+  "categories": [
+    {
+      "id": "traditional",
+      "name": "Traditional Dishes",
+      "description": "Classic Ethiopian combination platters served on injera with a variety of stews and salads."
+    },
+    {
+      "id": "vegetarian",
+      "name": "Vegetarian / Fasting",
+      "description": "Plant-based dishes perfect for fasting days — rich lentils, split peas, and vegetables."
+    },
+    {
+      "id": "tibs",
+      "name": "Tibs",
+      "description": "Sautéed meat with onions, peppers, and berbere spice, served sizzling."
+    },
+    {
+      "id": "kitfo",
+      "name": "Kitfo",
+      "description": "Minced raw or rare beef seasoned with mitmita and niter kibbeh — an Ethiopian delicacy."
+    },
+    {
+      "id": "firfir",
+      "name": "Firfir",
+      "description": "Shredded injera simmered with spicy berbere sauce and your choice of meat or vegetables."
+    },
+    {
+      "id": "breakfast",
+      "name": "Breakfast",
+      "description": "Hearty Ethiopian breakfast dishes to start your day with warmth and spice."
+    },
+    {
+      "id": "drinks",
+      "name": "Drinks",
+      "description": "Traditional Ethiopian coffee, teas, and refreshing beverages."
+    },
+    {
+      "id": "desserts",
+      "name": "Desserts",
+      "description": "Sweet finishes to complete your Ethiopian dining experience."
+    }
+  ],
+  "dishes": [
+    {
+      "id": "doro-wot-combo",
+      "name": "Doro Wot Combo",
+      "category": "traditional",
+      "price": 18.99,
+      "description": "The national dish of Ethiopia — slow-simmered chicken leg in fiery berbere sauce with hard-boiled egg, served with injera and side salads.",
+      "image": "https://images.pexels.com/photos/36984977/pexels-photo-36984977.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "featured": true
+    },
+    {
+      "id": "veggie-combo",
+      "name": "Vegetarian Combo",
+      "category": "traditional",
+      "price": 16.99,
+      "description": "A colorful platter of misir wot, kik wot, gomen, atakilt, and shiro — five vegetarian stews on a bed of injera.",
+      "image": "https://images.pexels.com/photos/17486836/pexels-photo-17486836.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "featured": true
+    },
+    {
+      "id": "beef-tibs",
+      "name": "Sega Tibs",
+      "category": "tibs",
+      "price": 17.99,
+      "description": "Tender cubed beef sautéed with onions, jalapeños, rosemary, and niter kibbeh, served sizzling on injera.",
+      "image": "https://images.pexels.com/photos/17486827/pexels-photo-17486827.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "featured": true
+    },
+    {
+      "id": "kitfo-special",
+      "name": "Kitfo Special",
+      "category": "kitfo",
+      "price": 21.99,
+      "description": "Hand-minced lean beef warmed in spiced clarified butter and mitmita, served with ayib cheese and gomen greens.",
+      "image": "https://images.pexels.com/photos/37276010/pexels-photo-37276010.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "featured": true
+    },
+    {
+      "id": "firfir-beef",
+      "name": "Beef Firfir",
+      "category": "firfir",
+      "price": 15.99,
+      "description": "Shredded injera simmered in spicy berbere sauce with tender beef, served with fresh ayib cheese.",
+      "image": "https://images.pexels.com/photos/18647891/pexels-photo-18647891.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "featured": true
+    },
+    {
+      "id": "shiro",
+      "name": "Shiro Wot",
+      "category": "vegetarian",
+      "price": 13.99,
+      "description": "Smooth, creamy chickpea flour stew slow-cooked with garlic, onion, and berbere spice.",
+      "image": "https://images.pexels.com/photos/37555492/pexels-photo-37555492.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "featured": true
+    },
+    {
+      "id": "kik-wot",
+      "name": "Kik Wot",
+      "category": "vegetarian",
+      "price": 12.99,
+      "description": "Yellow split peas simmered in a mild, golden turmeric sauce with onions and garlic."
+    },
+    {
+      "id": "misir-wot",
+      "name": "Misir Wot",
+      "category": "vegetarian",
+      "price": 12.99,
+      "description": "Red lentils cooked in spicy berbere sauce — a fasting favorite rich in protein and flavor."
+    },
+    {
+      "id": "gomen",
+      "name": "Gomen",
+      "category": "vegetarian",
+      "price": 12.99,
+      "description": "Collard greens slow-cooked with garlic, ginger, and green chili until tender and aromatic."
+    },
+    {
+      "id": "atakilt",
+      "name": "Atakilt",
+      "category": "vegetarian",
+      "price": 12.99,
+      "description": "A mild cabbage, carrot, and potato stew seasoned with turmeric and garlic."
+    },
+    {
+      "id": "lamb-tibs",
+      "name": "Lamb Tibs",
+      "category": "tibs",
+      "price": 18.99,
+      "description": "Succulent lamb pieces sautéed with onions, peppers, and rosemary in niter kibbeh."
+    },
+    {
+      "id": "fish-tibs",
+      "name": "Fish Tibs",
+      "category": "tibs",
+      "price": 19.99,
+      "description": "Fresh tilapia sautéed with onions, tomatoes, and jalapeños in a light berbere sauce."
+    },
+    {
+      "id": "key-wot",
+      "name": "Key Wot",
+      "category": "tibs",
+      "price": 17.99,
+      "description": "Cubed beef simmered in a deep red berbere sauce with onions and garlic until tender."
+    },
+    {
+      "id": "kitfo-tibs",
+      "name": "Kitfo Tibs",
+      "category": "kitfo",
+      "price": 22.99,
+      "description": "Minced beef lightly sautéed with mitmita, niter kibbeh, and herbs — a cross between kitfo and tibs."
+    },
+    {
+      "id": "gored-gored",
+      "name": "Gored Gored",
+      "category": "kitfo",
+      "price": 23.99,
+      "description": "Cubed raw beef marinated in mitmita and spiced niter kibbeh, served with ayib cheese."
+    },
+    {
+      "id": "firfir-veggie",
+      "name": "Vegetarian Firfir",
+      "category": "firfir",
+      "price": 13.99,
+      "description": "Shredded injera simmered in spicy berbere sauce with onions and peppers — fully plant-based."
+    },
+    {
+      "id": "firfir-kitfo",
+      "name": "Kitfo Firfir",
+      "category": "firfir",
+      "price": 18.99,
+      "description": "Shredded injera with spicy berbere sauce topped with seasoned minced beef."
+    },
+    {
+      "id": "ful",
+      "name": "Ful",
+      "category": "breakfast",
+      "price": 11.99,
+      "description": "Slow-cooked fava beans with onion, tomato, green chili, and a drizzle of olive oil."
+    },
+    {
+      "id": "fata",
+      "name": "Fata",
+      "category": "breakfast",
+      "price": 11.99,
+      "description": "Torn injera simmered in spicy tomato sauce with onions and berbere — a warming breakfast bowl."
+    },
+    {
+      "id": "kinche",
+      "name": "Kinche",
+      "category": "breakfast",
+      "price": 10.99,
+      "description": "Cracked wheat cooked with niter kibbeh and onions — a comforting, mild Ethiopian porridge."
+    },
+    {
+      "id": "ethiopian-coffee",
+      "name": "Ethiopian Coffee Ceremony",
+      "category": "drinks",
+      "price": 6.99,
+      "description": "Freshly roasted and brewed Yirgacheffe coffee, served in a traditional jebena with popcorn.",
+      "image": "https://images.pexels.com/photos/38519856/pexels-photo-38519856.jpeg?auto=compress&cs=tinysrgb&w=800"
+    },
+    {
+      "id": "spiced-tea",
+      "name": "Spiced Tea",
+      "category": "drinks",
+      "price": 3.99,
+      "description": "Black tea steeped with cinnamon, cardamom, and cloves — warming and aromatic."
+    },
+    {
+      "id": "tej",
+      "name": "Tej (Honey Wine)",
+      "category": "drinks",
+      "price": 7.99,
+      "description": "Traditional Ethiopian honey wine, naturally fermented and lightly sweet."
+    },
+    {
+      "id": "sparkling-water",
+      "name": "Sparkling Water",
+      "category": "drinks",
+      "price": 2.99,
+      "description": "Chilled sparkling mineral water with a slice of lemon."
+    },
+    {
+      "id": "dabo-kolo",
+      "name": "Dabo Kolo",
+      "category": "desserts",
+      "price": 5.99,
+      "description": "Crunchy, lightly sweet roasted bites of wheat dough — a classic Ethiopian snack and dessert."
+    },
+    {
+      "id": "honey-cake",
+      "name": "Honey Cake",
+      "category": "desserts",
+      "price": 6.99,
+      "description": "Soft, moist cake sweetened with Ethiopian honey and a hint of cardamom."
+    },
+    {
+      "id": "fresh-fruit",
+      "name": "Fresh Fruit Platter",
+      "category": "desserts",
+      "price": 7.99,
+      "description": "Seasonal tropical fruits — mango, papaya, banana, and pineapple — beautifully arranged."
+    }
+  ]
+}
