@@ -14,6 +14,7 @@ type Status = 'idle' | 'submitting' | 'success' | 'error';
 export default function ReservationModal({ open, onClose }: ReservationModalProps) {
   const [status, setStatus] = useState<Status>('idle');
   const [errorMsg, setErrorMsg] = useState('');
+  const [waUrl, setWaUrl] = useState('');
   const [form, setForm] = useState({
     name: '',
     phone: '',
@@ -28,6 +29,7 @@ export default function ReservationModal({ open, onClose }: ReservationModalProp
     if (open) {
       setStatus('idle');
       setErrorMsg('');
+      setWaUrl('');
     }
   }, [open]);
 
@@ -70,10 +72,8 @@ export default function ReservationModal({ open, onClose }: ReservationModalProp
 
       await insertReservation(reservationData);
 
-      // Trigger WhatsApp notification (non-blocking)
-      sendWhatsAppNotification(reservationData).catch((err) =>
-        console.warn('CallMeBot notification background error:', err)
-      );
+      const generatedUrl = generateWhatsAppUrl(reservationData);
+      setWaUrl(generatedUrl);
 
       setStatus('success');
     } catch (err) {
@@ -100,23 +100,36 @@ export default function ReservationModal({ open, onClose }: ReservationModalProp
         </button>
 
         {status === 'success' ? (
-          <div className="px-6 py-16 text-center">
+          <div className="px-6 py-12 text-center">
             <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-green-100">
               <CheckCircle2 size={36} className="text-green-600" />
             </div>
             <h2 className="mt-5 font-serif text-3xl font-semibold text-espresso-900">
-              Request Received!
+              Request Saved!
             </h2>
             <p className="mx-auto mt-3 max-w-sm text-base leading-relaxed text-espresso-700">
-              Thank you, {form.name.split(' ')[0]}. We have received your table request and will
-              call you shortly at {form.phone} to confirm your reservation.
+              Thank you, {form.name.split(' ')[0]}. Your reservation has been recorded. Tap below to send this request directly to our host team via WhatsApp.
             </p>
-            <button
-              onClick={onClose}
-              className="mt-7 inline-flex items-center justify-center rounded-full bg-espresso-900 px-8 py-3.5 text-base font-semibold text-cream-100 transition-all hover:bg-espresso-800"
-            >
-              Close
-            </button>
+
+            <div className="mt-6 flex flex-col items-center justify-center gap-3">
+              {waUrl && (
+                <a
+                  href={waUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#25D366] px-8 py-3.5 text-base font-semibold text-white transition-all hover:bg-[#1ebd59] shadow-md hover:shadow-lg"
+                >
+                  <MessageSquare size={20} />
+                  Send Request via WhatsApp
+                </a>
+              )}
+              <button
+                onClick={onClose}
+                className="inline-flex w-full items-center justify-center rounded-full border border-espresso-900/20 px-8 py-3 text-base font-medium text-espresso-800 transition-all hover:bg-espresso-900/5"
+              >
+                Close
+              </button>
+            </div>
           </div>
         ) : (
           <div className="p-6 md:p-8">
