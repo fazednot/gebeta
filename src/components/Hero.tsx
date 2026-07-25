@@ -10,8 +10,8 @@ export default function Hero({ onNavigate, onOpenReservation }: HeroProps) {
   return (
     <section className="relative flex min-h-[100svh] items-center justify-center overflow-hidden">
       <img
-        src="https://images.pexels.com/photos/36984977/pexels-photo-36984977.jpeg?auto=compress&cs=tinysrgb&w=1920"
-        alt="Traditional Ethiopian meal served on injera with colorful stews"
+        src="/hero.jpg"
+        alt="Traditional Ethiopian meal served in a clay pot with colorful spices and smoke"
         className="absolute inset-0 h-full w-full object-cover"
         fetchPriority="high"
       />
