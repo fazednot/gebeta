@@ -1,5 +1,6 @@
-import { MapPin, Phone, Clock, MessageCircle } from 'lucide-react';
+import { MapPin, Phone, Clock, MessageCircle, Truck, Users } from 'lucide-react';
 import { RESTAURANT } from '@/data/menu';
+import { buildWhatsAppInquiry } from '@/data/services';
 
 export default function VisitUs() {
   return (
@@ -81,6 +82,44 @@ export default function VisitUs() {
                       </li>
                     ))}
                   </ul>
+                </div>
+              </div>
+            </div>
+
+            <div className="rounded-2xl border border-cream-100/10 bg-espresso-900/50 p-6">
+              <div className="flex items-start gap-4">
+                <Truck size={22} className="mt-1 shrink-0 text-gold-400" />
+                <div className="flex-1">
+                  <h3 className="font-serif text-lg font-semibold text-cream-100">
+                    Delivery and Catering
+                  </h3>
+                  <p className="mt-1 text-sm leading-relaxed text-cream-200/70">
+                    Need food for home, work, or an event? We can help with delivery and catering.
+                  </p>
+                  <div className="mt-4 flex flex-col gap-3 sm:flex-row">
+                    <a
+                      href={buildWhatsAppInquiry(
+                        'Hello Gebeta Restaurant! I would like to ask about delivery.'
+                      )}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-gold-400 px-5 py-3 text-sm font-semibold text-espresso-950 transition-all hover:bg-gold-500"
+                    >
+                      <MessageCircle size={16} />
+                      Delivery
+                    </a>
+                    <a
+                      href={buildWhatsAppInquiry(
+                        'Hello Gebeta Restaurant! I would like to ask about catering.'
+                      )}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex flex-1 items-center justify-center gap-2 rounded-full border border-cream-100/40 px-5 py-3 text-sm font-semibold text-cream-100 transition-all hover:border-gold-400 hover:text-gold-400"
+                    >
+                      <Users size={16} />
+                      Catering
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

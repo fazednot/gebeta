@@ -1,6 +1,7 @@
 import { useMemo, useState, useEffect } from 'react';
-import { Search, Filter, CalendarDays } from 'lucide-react';
+import { Search, Filter, CalendarDays, Truck, Users } from 'lucide-react';
 import { menu, formatPrice, getCategoryName } from '@/data/menu';
+import { serviceOffers } from '@/data/services';
 
 interface MenuPageProps {
   initialCategory?: string;
@@ -157,7 +158,8 @@ export default function MenuPage({ initialCategory, onNavigate, onOpenReservatio
             Ready to experience Gebeta?
           </h2>
           <p className="mt-3 text-cream-200/70">
-            Join us for a meal you will remember. Walk-ins welcome.
+            Join us for a meal you will remember. Walk-ins welcome, and delivery or catering is
+            just a tap away.
           </p>
           <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <button
@@ -173,6 +175,24 @@ export default function MenuPage({ initialCategory, onNavigate, onOpenReservatio
             >
               Visit Us
             </button>
+            <a
+              href={serviceOffers[0].primaryActionHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-cream-100/40 px-8 py-3.5 text-base font-medium text-cream-100 transition-all hover:border-gold-400 hover:text-gold-400"
+            >
+              <Truck size={18} />
+              Delivery
+            </a>
+            <a
+              href={serviceOffers[1].primaryActionHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-cream-100/40 px-8 py-3.5 text-base font-medium text-cream-100 transition-all hover:border-gold-400 hover:text-gold-400"
+            >
+              <Users size={18} />
+              Catering
+            </a>
             <button
               onClick={() => onNavigate('/')}
               className="inline-flex items-center justify-center gap-2 rounded-full border border-cream-100/40 px-8 py-3.5 text-base font-medium text-cream-100 transition-all hover:border-gold-400 hover:text-gold-400"

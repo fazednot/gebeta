@@ -23,8 +23,8 @@ export default function ReservationCTA({ onOpenReservation }: ReservationCTAProp
           Join Us for an Unforgettable Meal
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-cream-200/70">
-          Planning a special evening, a family gathering, or just a craving for authentic Ethiopian
-          cuisine? Request a table and we will confirm your reservation by phone.
+          Planning a special evening, a family gathering, or an event where food needs to be
+          handled with care? Request a table and we will confirm your reservation by phone.
         </p>
 
         <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
@@ -46,7 +46,7 @@ export default function ReservationCTA({ onOpenReservation }: ReservationCTAProp
 
         <p className="mt-6 flex items-center justify-center gap-2 text-sm text-cream-200/50">
           <Clock size={15} />
-          Open Tue–Sun · Walk-ins welcome
+          Open Tue-Sun · Walk-ins welcome
         </p>
       </div>
     </section>

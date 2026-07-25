@@ -17,7 +17,7 @@ export default function Footer({ onNavigate, onOpenReservation }: FooterProps) {
             </h3>
             <p className="mt-3 text-sm leading-relaxed text-cream-200/70">
               Authentic Ethiopian cuisine in the heart of Minnesota. Traditional recipes,
-              fresh ingredients, and warm family hospitality.
+              fresh ingredients, warm family hospitality, plus dine-in, takeout, delivery, and catering.
             </p>
             <div className="mt-5 flex gap-3">
               <a
@@ -50,6 +50,7 @@ export default function Footer({ onNavigate, onOpenReservation }: FooterProps) {
                 { label: 'Home', path: '/' },
                 { label: 'Full Menu', path: '/menu' },
                 { label: 'Our Story', path: '/#story' },
+                { label: 'Services', path: '/#services' },
                 { label: 'Gallery', path: '/#gallery' },
                 { label: 'Visit Us', path: '/#visit' },
               ].map((link) => (
