@@ -1,37 +1,27 @@
 const galleryImages = [
   {
-    src: 'https://images.pexels.com/photos/36984977/pexels-photo-36984977.jpeg?auto=compress&cs=tinysrgb&w=800',
-    alt: 'Traditional Ethiopian meal with colorful stews on injera',
+    src: '/photo-fasting-platter.jpg',
+    alt: 'Full Ethiopian fasting platter — eight colorful stews on injera, overhead view',
     span: 'lg:col-span-2 lg:row-span-2',
   },
   {
-    src: 'https://images.pexels.com/photos/38519856/pexels-photo-38519856.jpeg?auto=compress&cs=tinysrgb&w=600',
-    alt: 'Ethiopian coffee ceremony with traditional jebena pot',
+    src: '/photo-coffee-ceremony.jpg',
+    alt: 'Traditional Ethiopian coffee ceremony — jebena pot on tray with incense smoke and bokeh lights',
     span: '',
   },
   {
-    src: 'https://images.pexels.com/photos/17486827/pexels-photo-17486827.jpeg?auto=compress&cs=tinysrgb&w=600',
-    alt: 'Breakfast plates with Ethiopian dishes',
+    src: '/photo-chicken-tibs.jpg',
+    alt: 'Chicken tibs served on injera with salad on a woven basket plate',
     span: '',
   },
   {
-    src: 'https://images.pexels.com/photos/18765288/pexels-photo-18765288.jpeg?auto=compress&cs=tinysrgb&w=600',
-    alt: 'Warm restaurant interior with smoky ambiance',
+    src: '/photo-kitfo-minced.jpg',
+    alt: 'Minced beef kitfo in a white dish on a colorful woven plate with rolled injera',
     span: '',
   },
   {
-    src: 'https://images.pexels.com/photos/37555492/pexels-photo-37555492.jpeg?auto=compress&cs=tinysrgb&w=600',
-    alt: 'Traditional basket with packed Ethiopian food',
-    span: '',
-  },
-  {
-    src: 'https://images.pexels.com/photos/17486836/pexels-photo-17486836.jpeg?auto=compress&cs=tinysrgb&w=600',
-    alt: 'Ethiopian meal served on a plate',
-    span: '',
-  },
-  {
-    src: 'https://images.pexels.com/photos/18647891/pexels-photo-18647891.jpeg?auto=compress&cs=tinysrgb&w=600',
-    alt: 'Person enjoying Ethiopian outdoor event',
+    src: '/photo-veggie-combo.jpg',
+    alt: 'Traditional Ethiopian combo platter — misir, gomen, and shiro with injera fan on red plate',
     span: 'lg:col-span-2',
   },
 ];

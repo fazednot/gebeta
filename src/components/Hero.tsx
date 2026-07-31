@@ -9,10 +9,23 @@ interface HeroProps {
 export default function Hero({ onNavigate, onOpenReservation }: HeroProps) {
   return (
     <section className="relative flex min-h-[100svh] items-center justify-center overflow-hidden">
-      <img
-        src="/hero.jpg"
-        alt="Traditional Ethiopian meal served in a clay pot with colorful spices and smoke"
+      {/* Video hero — poster shows instantly; video streams in behind it */}
+      <video
         className="absolute inset-0 h-full w-full object-cover"
+        autoPlay
+        muted
+        loop
+        playsInline
+        poster="/photo-coffee-ceremony.jpg"
+        aria-hidden="true"
+      >
+        <source src="/video-food.mp4" type="video/mp4" />
+      </video>
+      {/* Fallback image for browsers/devices that block autoplay */}
+      <img
+        src="/photo-coffee-ceremony.jpg"
+        alt="Traditional Ethiopian coffee ceremony jebena with incense smoke"
+        className="absolute inset-0 h-full w-full object-cover -z-10"
         fetchPriority="high"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-espresso-950/80 via-espresso-950/50 to-espresso-950/85" />

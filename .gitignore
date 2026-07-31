@@ -22,3 +22,9 @@ dist-ssr
 *.sw?
 .env
 *.zip
+
+# Source photos folder - files are copied to public/
+photos_to_add/
+
+# Large video file - served from public/ but too big for git
+public/video-food.mp4

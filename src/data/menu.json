@@ -48,7 +48,7 @@
       "category": "traditional",
       "price": 18.99,
       "description": "The national dish of Ethiopia — slow-simmered chicken leg in fiery berbere sauce with hard-boiled egg, served with injera and side salads.",
-      "image": "https://images.pexels.com/photos/36984977/pexels-photo-36984977.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "image": "/photo-chicken-tibs.jpg",
       "featured": true
     },
     {
@@ -57,7 +57,7 @@
       "category": "traditional",
       "price": 16.99,
       "description": "A colorful platter of misir wot, kik wot, gomen, atakilt, and shiro — five vegetarian stews on a bed of injera.",
-      "image": "https://images.pexels.com/photos/17486836/pexels-photo-17486836.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "image": "/photo-fasting-platter.jpg",
       "featured": true
     },
     {
@@ -66,7 +66,7 @@
       "category": "tibs",
       "price": 17.99,
       "description": "Tender cubed beef sautéed with onions, jalapeños, rosemary, and niter kibbeh, served sizzling on injera.",
-      "image": "https://images.pexels.com/photos/17486827/pexels-photo-17486827.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "image": "/photo-chicken-tibs.jpg",
       "featured": true
     },
     {
@@ -75,7 +75,7 @@
       "category": "kitfo",
       "price": 21.99,
       "description": "Hand-minced lean beef warmed in spiced clarified butter and mitmita, served with ayib cheese and gomen greens.",
-      "image": "https://images.pexels.com/photos/37276010/pexels-photo-37276010.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "image": "/photo-kitfo-minced.jpg",
       "featured": true
     },
     {
@@ -84,7 +84,7 @@
       "category": "firfir",
       "price": 15.99,
       "description": "Shredded injera simmered in spicy berbere sauce with tender beef, served with fresh ayib cheese.",
-      "image": "https://images.pexels.com/photos/18647891/pexels-photo-18647891.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "image": "/photo-kitfo-minced.jpg",
       "featured": true
     },
     {
@@ -93,7 +93,7 @@
       "category": "vegetarian",
       "price": 13.99,
       "description": "Smooth, creamy chickpea flour stew slow-cooked with garlic, onion, and berbere spice.",
-      "image": "https://images.pexels.com/photos/37555492/pexels-photo-37555492.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "image": "/photo-veggie-combo.jpg",
       "featured": true
     },
     {
@@ -200,7 +200,7 @@
       "category": "drinks",
       "price": 6.99,
       "description": "Freshly roasted and brewed Yirgacheffe coffee, served in a traditional jebena with popcorn.",
-      "image": "https://images.pexels.com/photos/38519856/pexels-photo-38519856.jpeg?auto=compress&cs=tinysrgb&w=800"
+      "image": "/photo-coffee-ceremony.jpg"
     },
     {
       "id": "spiced-tea",
