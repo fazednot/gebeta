@@ -1,4 +1,4 @@
-import { menu, formatPrice } from '@/data/menu';
+import { menu } from '@/data/menu';
 
 export default function FeaturedDishes() {
   const dishes = menu.dishes.filter((d) => d.featured).slice(0, 6);
@@ -34,12 +34,7 @@ export default function FeaturedDishes() {
                 />
               </div>
               <div className="p-6">
-                <div className="flex items-baseline justify-between gap-3">
-                  <h3 className="font-serif text-xl font-semibold text-espresso-900">{dish.name}</h3>
-                  <span className="shrink-0 font-sans text-lg font-semibold text-gold-600">
-                    {formatPrice(dish.price)}
-                  </span>
-                </div>
+                <h3 className="font-serif text-xl font-semibold text-espresso-900">{dish.name}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-espresso-600">{dish.description}</p>
               </div>
             </article>

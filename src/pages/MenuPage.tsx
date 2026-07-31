@@ -1,6 +1,6 @@
 import { useMemo, useState, useEffect } from 'react';
 import { Search, Filter, CalendarDays, Truck, Users } from 'lucide-react';
-import { menu, formatPrice, getCategoryName } from '@/data/menu';
+import { menu, getCategoryName } from '@/data/menu';
 import { serviceOffers } from '@/data/services';
 
 interface MenuPageProps {
@@ -51,7 +51,7 @@ export default function MenuPage({ initialCategory, onNavigate, onOpenReservatio
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-espresso-700">
             Every dish is prepared fresh to order with authentic Ethiopian spices and served with
-            traditional injera. Prices in USD.
+            traditional injera.
           </p>
         </div>
 
@@ -131,14 +131,9 @@ export default function MenuPage({ initialCategory, onNavigate, onOpenReservatio
                         />
                       )}
                       <div className="flex flex-1 flex-col">
-                        <div className="flex items-baseline justify-between gap-3">
-                          <h3 className="font-serif text-lg font-semibold text-espresso-900">
-                            {dish.name}
-                          </h3>
-                          <span className="shrink-0 font-semibold text-gold-600">
-                            {formatPrice(dish.price)}
-                          </span>
-                        </div>
+                        <h3 className="font-serif text-lg font-semibold text-espresso-900">
+                          {dish.name}
+                        </h3>
                         <p className="mt-1 text-sm leading-relaxed text-espresso-600">
                           {dish.description}
                         </p>

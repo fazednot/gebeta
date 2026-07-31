@@ -5,8 +5,8 @@ export default function OurStory() {
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <div className="relative">
             <img
-              src="https://images.pexels.com/photos/38519856/pexels-photo-38519856.jpeg?auto=compress&cs=tinysrgb&w=900"
-              alt="Traditional Ethiopian coffee ceremony with jebena pot"
+              src="/photo-coffee-ceremony.jpg"
+              alt="Traditional Ethiopian coffee ceremony — jebena pot on tray with incense and warm bokeh"
               loading="lazy"
               className="aspect-[4/5] w-full rounded-2xl object-cover shadow-2xl"
             />

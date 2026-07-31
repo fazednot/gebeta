@@ -19,7 +19,7 @@ export default function Hero({ onNavigate, onOpenReservation }: HeroProps) {
         poster="/photo-coffee-ceremony.jpg"
         aria-hidden="true"
       >
-        <source src="/video-food.mp4" type="video/mp4" />
+        <source src="/video-food-web.mp4" type="video/mp4" />
       </video>
       {/* Fallback image for browsers/devices that block autoplay */}
       <img

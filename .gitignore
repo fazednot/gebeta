@@ -28,3 +28,4 @@ photos_to_add/
 
 # Large video file - served from public/ but too big for git
 public/video-food.mp4
+public/video-food-web.mp4

@@ -1,6 +1,7 @@
 import Hero from '@/components/Hero';
 import FeaturedDishes from '@/components/FeaturedDishes';
 import OurStory from '@/components/OurStory';
+import CookingClasses from '@/components/CookingClasses';
 import Services from '@/components/Services';
 import MenuPreview from '@/components/MenuPreview';
 import Gallery from '@/components/Gallery';
@@ -19,6 +20,7 @@ export default function HomePage({ onNavigate, onOpenReservation }: HomePageProp
       <Hero onNavigate={onNavigate} onOpenReservation={onOpenReservation} />
       <FeaturedDishes />
       <OurStory />
+      <CookingClasses />
       <Services />
       <MenuPreview onNavigate={onNavigate} />
       <Gallery />
