@@ -9,26 +9,14 @@ interface HeroProps {
 export default function Hero({ onNavigate, onOpenReservation }: HeroProps) {
   return (
     <section className="relative flex min-h-[100svh] items-center justify-center overflow-hidden">
-      {/* Video hero — poster shows instantly; video streams in behind it */}
-      <video
-        className="absolute inset-0 h-full w-full object-cover"
-        autoPlay
-        muted
-        loop
-        playsInline
-        poster="/photo-coffee-ceremony.jpg"
-        aria-hidden="true"
-      >
-        <source src="/video-food-web.mp4" type="video/mp4" />
-      </video>
-      {/* Fallback image for browsers/devices that block autoplay */}
+      {/* Hero image — kitfo on colorful habesha plate, most cinematic food shot */}
       <img
-        src="/photo-coffee-ceremony.jpg"
-        alt="Traditional Ethiopian coffee ceremony jebena with incense smoke"
-        className="absolute inset-0 h-full w-full object-cover -z-10"
+        src="/photo-kitfo-minced.jpg"
+        alt="Kitfo — Ethiopian minced beef in a white clay dish on a vibrant habesha plate, surrounded by injera"
         fetchPriority="high"
+        className="absolute inset-0 h-full w-full object-cover object-center"
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-espresso-950/80 via-espresso-950/50 to-espresso-950/85" />
+      <div className="absolute inset-0 bg-gradient-to-b from-espresso-950/75 via-espresso-950/55 to-espresso-950/85" />
 
       <div className="relative z-10 mx-auto max-w-3xl px-5 text-center">
         <p className="mb-4 text-sm font-medium uppercase tracking-[0.3em] text-gold-400 md:text-base">
