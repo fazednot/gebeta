@@ -10,7 +10,7 @@ export default function Footer({ onNavigate, onOpenReservation }: FooterProps) {
   return (
     <footer className="bg-espresso-950 text-cream-200">
       <div className="mx-auto max-w-8xl px-5 py-14 md:px-8">
-        <div className="grid gap-10 md:grid-cols-4">
+        <div className="grid gap-10 md:grid-cols-3">
           <div className="md:col-span-1">
             <h3 className="font-serif text-2xl font-semibold text-cream-100">
               Gebeta<span className="text-gold-400">.</span>
@@ -108,20 +108,6 @@ export default function Footer({ onNavigate, onOpenReservation }: FooterProps) {
                   WhatsApp
                 </a>
               </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-xs font-semibold uppercase tracking-widest text-gold-400">
-              Hours
-            </h4>
-            <ul className="mt-4 space-y-1.5 text-sm text-cream-200/70">
-              {RESTAURANT.hours.map((h) => (
-                <li key={h.day} className="flex justify-between gap-4">
-                  <span>{h.day}</span>
-                  <span className="text-cream-200/50">{h.hours}</span>
-                </li>
-              ))}
             </ul>
           </div>
         </div>

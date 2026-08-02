@@ -1,4 +1,4 @@
-import { MapPin, Phone, Clock, MessageCircle, Truck, Users } from 'lucide-react';
+import { MapPin, Phone, MessageCircle, Truck, Users } from 'lucide-react';
 import { RESTAURANT } from '@/data/menu';
 import { buildWhatsAppInquiry } from '@/data/services';
 
@@ -63,25 +63,6 @@ export default function VisitUs() {
                   >
                     {RESTAURANT.phone}
                   </a>
-                </div>
-              </div>
-            </div>
-
-            <div className="rounded-2xl border border-cream-100/10 bg-espresso-900/50 p-6">
-              <div className="flex items-start gap-4">
-                <Clock size={22} className="mt-1 shrink-0 text-gold-400" />
-                <div className="flex-1">
-                  <h3 className="font-serif text-lg font-semibold text-cream-100">Opening Hours</h3>
-                  <ul className="mt-2 space-y-1 text-sm">
-                    {RESTAURANT.hours.map((h) => (
-                      <li key={h.day} className="flex justify-between gap-4 text-cream-200/70">
-                        <span>{h.day}</span>
-                        <span className={h.hours === 'Closed' ? 'text-red-400/70' : ''}>
-                          {h.hours}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
                 </div>
               </div>
             </div>
