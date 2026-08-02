@@ -1,27 +1,27 @@
 const galleryImages = [
   {
-    src: '/photo-fasting-platter.jpg',
-    alt: 'Full Ethiopian fasting platter — eight colorful stews on injera, overhead view',
+    src: '/photo-gallery-injera.jpg',
+    alt: 'Fresh teff injera bread baking on a traditional hot griddle (mitad)',
     span: 'lg:col-span-2 lg:row-span-2',
   },
   {
-    src: '/photo-coffee-ceremony.jpg',
-    alt: 'Traditional Ethiopian coffee ceremony — jebena pot on tray with incense smoke and bokeh lights',
+    src: '/photo-gallery-spices.jpg',
+    alt: 'Handcrafted clay bowls filled with red berbere, turmeric, and cardamom spices',
     span: '',
   },
   {
-    src: '/photo-chicken-tibs.jpg',
-    alt: 'Chicken tibs served on injera with salad on a woven basket plate',
+    src: '/photo-gallery-ambiance.jpg',
+    alt: 'Warm, upscale Ethiopian restaurant dining room interior with mesob tables',
     span: '',
   },
   {
-    src: '/photo-kitfo-minced.jpg',
-    alt: 'Minced beef kitfo in a white dish on a colorful woven plate with rolled injera',
+    src: '/photo-gallery-roasting.jpg',
+    alt: 'Roasting green coffee beans in a pan over charcoal during a traditional ceremony',
     span: '',
   },
   {
-    src: '/photo-veggie-combo.jpg',
-    alt: 'Traditional Ethiopian combo platter — misir, gomen, and shiro with injera fan on red plate',
+    src: '/photo-gallery-gomen.jpg',
+    alt: 'Fresh sautéed collard greens (gomen) with spiced butter and garlic',
     span: 'lg:col-span-2',
   },
 ];

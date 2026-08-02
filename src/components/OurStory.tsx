@@ -5,10 +5,10 @@ export default function OurStory() {
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <div className="relative">
             <img
-              src="/photo-coffee-ceremony.jpg"
-              alt="Traditional Ethiopian coffee ceremony — jebena pot on tray with incense and warm bokeh"
+              src="/photo-our-story.jpg"
+              alt="Ethiopian family hospitality and coffee pouring ceremony"
               loading="lazy"
-              className="aspect-[4/5] w-full rounded-2xl object-cover shadow-2xl"
+              className="aspect-[4/3] w-full object-cover transition-transform duration-700 hover:scale-105"
             />
             <div className="absolute -bottom-6 -right-6 hidden h-40 w-40 rounded-2xl border-8 border-espresso-950 bg-gold-400 p-6 text-center md:flex md:flex-col md:items-center md:justify-center">
               <span className="font-serif text-4xl font-bold text-espresso-950">100%</span>

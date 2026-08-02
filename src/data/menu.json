@@ -48,7 +48,7 @@
       "category": "traditional",
       "price": 18.99,
       "description": "The national dish of Ethiopia — slow-simmered chicken leg in fiery berbere sauce with hard-boiled egg, served with injera and side salads.",
-      "image": "/photo-chicken-tibs.jpg",
+      "image": "/photo-doro-wot.jpg",
       "featured": true
     },
     {
@@ -57,7 +57,7 @@
       "category": "traditional",
       "price": 16.99,
       "description": "A colorful platter of misir wot, kik wot, gomen, atakilt, and shiro — five vegetarian stews on a bed of injera.",
-      "image": "/photo-fasting-platter.jpg",
+      "image": "/photo-veggie-combo.jpg",
       "featured": true
     },
     {
@@ -84,7 +84,7 @@
       "category": "firfir",
       "price": 15.99,
       "description": "Shredded injera simmered in spicy berbere sauce with tender beef, served with fresh ayib cheese.",
-      "image": "/photo-veggie-combo.jpg",
+      "image": "/photo-beef-firfir.jpg",
       "featured": true
     },
     {
@@ -93,7 +93,7 @@
       "category": "vegetarian",
       "price": 13.99,
       "description": "Smooth, creamy chickpea flour stew slow-cooked with garlic, onion, and berbere spice.",
-      "image": "/photo-coffee-ceremony.jpg",
+      "image": "/photo-shiro-wot.jpg",
       "featured": true
     },
     {
