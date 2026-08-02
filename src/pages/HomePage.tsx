@@ -18,14 +18,15 @@ export default function HomePage({ onNavigate, onOpenReservation }: HomePageProp
   return (
     <>
       <Hero onNavigate={onNavigate} onOpenReservation={onOpenReservation} />
-      <FeaturedDishes />
+      <FeaturedDishes onNavigate={onNavigate} />
       <OurStory />
       <CookingClasses />
       <Services />
       <MenuPreview onNavigate={onNavigate} />
+      {/* Gallery: one photo grid only — FeaturedDishes above already shows food cards */}
       <Gallery />
       <Testimonials />
-      <ReservationCTA onOpenReservation={onOpenReservation} />
+      <ReservationCTA onOpenReservation={onOpenReservation} onNavigate={onNavigate} />
       <VisitUs />
     </>
   );

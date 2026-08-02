@@ -1,6 +1,11 @@
+import { ArrowRight } from 'lucide-react';
 import { menu } from '@/data/menu';
 
-export default function FeaturedDishes() {
+interface FeaturedDishesProps {
+  onNavigate?: (path: string) => void;
+}
+
+export default function FeaturedDishes({ onNavigate }: FeaturedDishesProps) {
   const dishes = menu.dishes.filter((d) => d.featured).slice(0, 6);
 
   return (
@@ -23,14 +28,14 @@ export default function FeaturedDishes() {
           {dishes.map((dish) => (
             <article
               key={dish.id}
-              className="group overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-espresso-900/5 transition-all hover:shadow-xl"
+              className="group overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-espresso-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:ring-gold-400/30"
             >
               <div className="aspect-[4/3] overflow-hidden">
                 <img
                   src={dish.image}
                   alt={dish.name}
                   loading="lazy"
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
               <div className="p-6">
@@ -40,6 +45,18 @@ export default function FeaturedDishes() {
             </article>
           ))}
         </div>
+
+        {onNavigate && (
+          <div className="mt-12 text-center">
+            <button
+              onClick={() => onNavigate('/menu')}
+              className="inline-flex items-center gap-2 rounded-full border-2 border-espresso-900 px-8 py-3.5 text-base font-semibold text-espresso-900 transition-all hover:bg-espresso-900 hover:text-cream-100"
+            >
+              See Full Menu
+              <ArrowRight size={17} />
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );
