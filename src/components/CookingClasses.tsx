@@ -78,8 +78,8 @@ export default function CookingClasses() {
           {/* Side image */}
           <div className="hidden overflow-hidden rounded-2xl lg:block">
             <img
-              src="/photo-cooking-prep.jpg"
-              alt="Hands-on Ethiopian cooking class spice prep and teff batter"
+              src="/real-cooking-prep.jpg"
+              alt="Authentic Ethiopian food preparation and traditional cuisine"
               loading="lazy"
               className="aspect-[4/3] w-full object-cover transition-transform duration-700 hover:scale-105"
             />

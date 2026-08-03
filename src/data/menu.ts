@@ -22,26 +22,27 @@ export interface MenuData {
 export const RESTAURANT = {
   name: 'Gebeta Restaurant',
   tagline: 'Authentic Ethiopian Cuisine',
-  phone: '(612) 594-2424',
-  phoneHref: 'tel:+16125942424',
-  whatsapp: 'https://wa.me/16125942424',
+  phone: '(651) 350-7822',
+  altPhone: '(952) 220-5927',
+  phoneHref: 'tel:+16513507822',
+  whatsapp: 'https://wa.me/16513507822',
   address: {
-    street: '2722 4th Ave S',
-    city: 'Minneapolis',
+    street: '1049 Dodd Rd',
+    city: 'West St Paul',
     state: 'MN',
-    zip: '55407',
+    zip: '55118',
   },
-  mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Gebeta+Restaurant+Minneapolis+MN',
+  mapsUrl: 'https://www.google.com/maps/search/?api=1&query=1049+Dodd+Rd+West+St+Paul+MN+55118',
   mapsEmbed:
-    'https://www.google.com/maps?q=2722+4th+Ave+S+Minneapolis+MN+55407&output=embed',
+    'https://www.google.com/maps?q=1049+Dodd+Rd+West+St+Paul+MN+55118&output=embed',
   hours: [
-    { day: 'Monday', hours: 'Closed' },
-    { day: 'Tuesday', hours: '11:00 AM – 9:00 PM' },
-    { day: 'Wednesday', hours: '11:00 AM – 9:00 PM' },
-    { day: 'Thursday', hours: '11:00 AM – 9:00 PM' },
-    { day: 'Friday', hours: '11:00 AM – 10:00 PM' },
-    { day: 'Saturday', hours: '11:00 AM – 10:00 PM' },
-    { day: 'Sunday', hours: '11:00 AM – 9:00 PM' },
+    { day: 'Monday', hours: '11:30 AM – 10:00 PM' },
+    { day: 'Tuesday', hours: '11:30 AM – 10:00 PM' },
+    { day: 'Wednesday', hours: 'Closed' },
+    { day: 'Thursday', hours: '11:30 AM – 10:00 PM' },
+    { day: 'Friday', hours: '11:30 AM – 10:00 PM' },
+    { day: 'Saturday', hours: '11:30 AM – 10:00 PM' },
+    { day: 'Sunday', hours: '11:30 AM – 10:00 PM' },
   ],
   social: {
     instagram: 'https://www.instagram.com/',
@@ -58,5 +59,6 @@ export function formatPrice(price: number): string {
 }
 
 export function getCategoryName(categoryId: string): string {
-  return menu.categories.find((c) => c.id === categoryId)?.name ?? categoryId;
+  const category = menu.categories.find((c) => c.id === categoryId);
+  return category ? category.name : categoryId;
 }

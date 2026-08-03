@@ -1,28 +1,33 @@
 const galleryImages = [
   {
-    src: '/photo-gallery-injera.jpg',
-    alt: 'Fresh teff injera bread baking on a traditional hot griddle (mitad)',
+    src: '/real-gallery-1.jpg',
+    alt: 'Gebeta Restaurant dining room and traditional mesob seating area',
     span: 'lg:col-span-2 lg:row-span-2',
   },
   {
-    src: '/photo-gallery-spices.jpg',
-    alt: 'Handcrafted clay bowls filled with red berbere, turmeric, and cardamom spices',
+    src: '/real-gallery-2.jpg',
+    alt: 'Authentic Ethiopian food dishes served on woven mesob platter',
     span: '',
   },
   {
-    src: '/photo-gallery-ambiance.jpg',
-    alt: 'Warm, upscale Ethiopian restaurant dining room interior with mesob tables',
+    src: '/real-gallery-3.jpg',
+    alt: 'Sizzling tibs and Ethiopian traditional dishes',
     span: '',
   },
   {
-    src: '/photo-gallery-roasting.jpg',
-    alt: 'Roasting green coffee beans in a pan over charcoal during a traditional ceremony',
+    src: '/real-gallery-4.jpg',
+    alt: 'Gebeta Restaurant interior decor and cultural artwork',
     span: '',
   },
   {
-    src: '/photo-gallery-gomen.jpg',
-    alt: 'Fresh sautéed collard greens (gomen) with spiced butter and garlic',
+    src: '/real-gallery-5.jpg',
+    alt: 'Traditional Ethiopian combination platter on fresh injera',
     span: 'lg:col-span-2',
+  },
+  {
+    src: '/real-gallery-6.jpg',
+    alt: 'Warm family dining experience at Gebeta Restaurant',
+    span: '',
   },
 ];
 
@@ -38,11 +43,11 @@ export default function Gallery() {
             Gallery
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-cream-200/70">
-            Food, ceremony, and the warmth of gathering — a glimpse into the Gebeta experience.
+            Real food, authentic space, and the warmth of gathering — a glimpse into Gebeta Restaurant.
           </p>
         </div>
 
-        <div className="mt-12 grid auto-rows-[200px] grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
+        <div className="mt-12 grid auto-rows-[220px] grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
           {galleryImages.map((img, i) => (
             <div
               key={i}
