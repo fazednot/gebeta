@@ -84,7 +84,7 @@
       "category": "firfir",
       "price": 15.99,
       "description": "Shredded injera simmered in spicy berbere sauce with tender beef, served with fresh ayib cheese.",
-      "image": "/real-beef-firfir.jpg",
+      "image": "/photo-beef-firfir.jpg",
       "featured": true
     },
     {
@@ -93,7 +93,7 @@
       "category": "vegetarian",
       "price": 13.99,
       "description": "Smooth, creamy chickpea flour stew slow-cooked with garlic, onion, and berbere spice.",
-      "image": "/real-shiro-wot.jpg",
+      "image": "/photo-shiro-wot.jpg",
       "featured": true
     },
     {
