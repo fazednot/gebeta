@@ -45,7 +45,7 @@ export const RESTAURANT = {
     { day: 'Sunday', hours: '11:30 AM – 10:00 PM' },
   ],
   social: {
-    instagram: 'https://www.instagram.com/',
+    instagram: 'https://www.instagram.com/gebetaethiopian/',
     facebook: 'https://www.facebook.com/',
   },
 };
