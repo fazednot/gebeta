@@ -259,6 +259,7 @@ Avoid:
 ## Performance Rules
 
 * Optimize images
+* Do not crop out logos, restaurant signage, text, or essential subject content when editing or resizing images
 * Lazy-load below fold
 * Minimize fonts
 * Avoid heavy dependencies
