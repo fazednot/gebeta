@@ -10,8 +10,8 @@ const galleryImages = [
     span: '',
   },
   {
-    src: '/real-gallery-3.jpg',
-    alt: 'Sizzling tibs and Ethiopian traditional dishes',
+    src: '/real-beef-ribs.jpg',
+    alt: 'Sizzling Ethiopian beef tibs and ribs with rosemary, peppers, and onions',
     span: '',
   },
   {
