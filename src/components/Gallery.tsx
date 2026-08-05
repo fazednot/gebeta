@@ -1,60 +1,71 @@
 import { useState } from 'react';
 import { Maximize2 } from 'lucide-react';
+import { useLanguage } from '@/context/LanguageContext';
 
 const galleryImages = [
   {
     src: '/real-gallery-bar.jpg',
     alt: 'Gebeta Restaurant full bar counter with seating and sports TVs',
-    caption: 'Full Service Bar & Lounge',
+    captionEn: 'Full Service Bar & Lounge',
+    captionAm: 'ሙሉ የባር አገልግሎትና ላውንጅ',
     span: 'lg:col-span-2 lg:row-span-2',
   },
   {
     src: '/real-gallery-storefront.jpg',
     alt: 'Gebeta Restaurant building entrance and official storefront sign at 1049 Dodd Rd',
-    caption: 'Gebeta Storefront Entrance',
+    captionEn: 'Gebeta Storefront Entrance',
+    captionAm: 'የገበታ ሬስቶራንት መግቢያ',
     span: 'lg:col-span-1 lg:row-span-2',
   },
   {
-    src: '/real-gallery-dining-main.jpg',
-    alt: 'Gebeta Restaurant spacious dining room with cultural ceiling artwork',
-    caption: 'Main Dining Hall',
+    src: '/real-gallery-mesob-entrance.jpg',
+    alt: 'Traditional colorful Ethiopian woven mesob baskets at dining room entrance',
+    captionEn: 'Traditional Mesob Entrance',
+    captionAm: 'ባህላዊ የመሶብ መግቢያ',
     span: 'lg:col-span-1',
   },
   {
     src: '/real-gallery-mesob-seating.jpg',
     alt: 'Traditional Ethiopian woven mesob dining tables and seating area',
-    caption: 'Mesob Seating Tables',
+    captionEn: 'Mesob Seating Tables',
+    captionAm: 'የመሶብ መመገቢያ ጠረጴዛዎች',
     span: 'lg:col-span-1',
   },
   {
     src: '/real-gallery-wall-art.jpg',
     alt: 'Ethiopian cultural wall murals, artwork, and dining atmosphere',
-    caption: 'Cultural Wall Artwork',
+    captionEn: 'Cultural Wall Artwork',
+    captionAm: 'ባህላዊ የሥዕል ጥበባት',
     span: 'lg:col-span-2',
   },
   {
     src: '/real-gallery-dining-view.jpg',
     alt: 'Warm and spacious interior dining area view at Gebeta Restaurant',
-    caption: 'Interior Dining View',
+    captionEn: 'Interior Dining View',
+    captionAm: 'የውስጥ መመገቢያ አዳራሽ',
     span: 'lg:col-span-2',
   },
 ];
 
 export default function Gallery() {
   const [activeLightbox, setActiveLightbox] = useState<string | null>(null);
+  const { lang, t } = useLanguage();
 
   return (
     <section id="gallery" className="bg-espresso-950 py-20 md:py-28">
       <div className="mx-auto max-w-8xl px-5 md:px-8">
         <div className="text-center">
           <p className="text-sm font-medium uppercase tracking-[0.25em] text-gold-400">
-            Our Restaurant Space
+            {t('Our Restaurant Space', 'የሬስቶራንታችን አዳራሽ')}
           </p>
           <h2 className="mt-3 font-serif text-4xl font-semibold text-cream-100 md:text-5xl">
-            Photo Gallery
+            {t('Photo Gallery', 'ፎቶ ጋለሪ')}
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-cream-200/70">
-            Bright, clear photos of our dining room, bar lounge, storefront, and traditional Ethiopian decor.
+            {t(
+              'Bright, clear photos of our dining room, bar lounge, storefront, and traditional Ethiopian decor.',
+              'የሬስቶራንታችን፣ የባር፣ የመግቢያ እና የባህላዊ ጌጣጌጦች ብሩህና እውነተኛ ፎቶዎች።'
+            )}
           </p>
         </div>
 
@@ -77,7 +88,7 @@ export default function Gallery() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 transition-opacity group-hover:opacity-100 flex flex-col justify-end p-4">
                 <div className="flex items-center justify-between">
                   <span className="font-serif text-sm font-semibold text-cream-100">
-                    {img.caption}
+                    {lang === 'am' ? img.captionAm : img.captionEn}
                   </span>
                   <span className="rounded-full bg-gold-400/20 p-1.5 text-gold-400 backdrop-blur-md">
                     <Maximize2 size={14} />
@@ -99,7 +110,7 @@ export default function Gallery() {
             onClick={() => setActiveLightbox(null)}
             className="fixed top-6 right-6 z-50 rounded-full bg-gold-400 px-5 py-2.5 text-xs font-bold text-espresso-950 shadow-2xl hover:bg-gold-300"
           >
-            Close Fullscreen ✕
+            {t('Close Fullscreen ✕', 'ዝጋ ✕')}
           </button>
           <img
             src={activeLightbox}
