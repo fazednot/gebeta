@@ -31,20 +31,6 @@ const galleryImages = [
     captionAm: 'የመሶብ መመገቢያ ጠረጴዛዎች',
     span: 'lg:col-span-1',
   },
-  {
-    src: '/real-gallery-wall-art.jpg',
-    alt: 'Ethiopian cultural wall murals, artwork, and dining atmosphere',
-    captionEn: 'Cultural Wall Artwork',
-    captionAm: 'ባህላዊ የሥዕል ጥበባት',
-    span: 'lg:col-span-2',
-  },
-  {
-    src: '/real-gallery-dining-view.jpg',
-    alt: 'Warm and spacious interior dining area view at Gebeta Restaurant',
-    captionEn: 'Interior Dining View',
-    captionAm: 'የውስጥ መመገቢያ አዳራሽ',
-    span: 'lg:col-span-2',
-  },
 ];
 
 export default function Gallery() {

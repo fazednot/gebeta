@@ -51,15 +51,6 @@
   ],
   "dishes": [
     {
-      "id": "doro-wot-combo",
-      "name": "Doro Wot Combo",
-      "nameAm": "ዶሮ ወጥ ኮምቦ",
-      "category": "traditional",
-      "price": 18.99,
-      "description": "The national dish of Ethiopia — slow-simmered chicken leg in fiery berbere sauce with hard-boiled egg, served with injera and side salads.",
-      "featured": true
-    },
-    {
       "id": "veggie-combo",
       "name": "Vegetarian Combo (Beyaynetu)",
       "nameAm": "የጾም በያይነቱ",
@@ -81,8 +72,8 @@
     },
     {
       "id": "kitfo-special",
-      "name": "Kitfo Special",
-      "nameAm": "ልዩ ክትፎ",
+      "name": "Gaslight",
+      "nameAm": "ጋስላይት",
       "category": "kitfo",
       "price": 21.99,
       "description": "Hand-minced lean beef warmed in spiced clarified butter and mitmita, served with ayib cheese and gomen greens.",
@@ -105,9 +96,7 @@
       "nameAm": "ሺሮ ወጥ",
       "category": "vegetarian",
       "price": 13.99,
-      "description": "Smooth, creamy chickpea flour stew slow-cooked with garlic, onion, and berbere spice.",
-      "image": "/real-shiro-dish.jpg",
-      "featured": true
+      "description": "Smooth, creamy chickpea flour stew slow-cooked with garlic, onion, and berbere spice."
     },
     {
       "id": "kik-wot",
