@@ -249,6 +249,9 @@ Avoid:
 
 * First screen must communicate identity instantly
 * Use real images over abstract design
+* Food dish images must strictly match the actual dish name and description (e.g. do not assign a fasting platter image to Doro Wot)
+* Gallery must contain ONLY real photos of the restaurant space/place (interior, bar, seating, dining room, storefront sign) — ZERO food photos in the gallery
+* DO NOT use AI-generated images except for the hero background image. Use image editing, not generation
 * Avoid flat/generic gradients
 * Maintain visual hierarchy
 * Avoid nested cards

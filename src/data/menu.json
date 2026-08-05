@@ -48,16 +48,15 @@
       "category": "traditional",
       "price": 18.99,
       "description": "The national dish of Ethiopia — slow-simmered chicken leg in fiery berbere sauce with hard-boiled egg, served with injera and side salads.",
-      "image": "/photo-fasting-platter.jpg",
       "featured": true
     },
     {
       "id": "veggie-combo",
-      "name": "Vegetarian Combo",
+      "name": "Vegetarian Combo (Beyaynetu)",
       "category": "traditional",
       "price": 16.99,
       "description": "A colorful platter of misir wot, kik wot, gomen, atakilt, and shiro — five vegetarian stews on a bed of injera.",
-      "image": "/photo-veggie-combo.jpg",
+      "image": "/photo-fasting-platter.jpg",
       "featured": true
     },
     {

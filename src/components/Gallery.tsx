@@ -5,44 +5,38 @@ const galleryImages = [
   {
     src: '/real-gallery-bar.jpg',
     alt: 'Gebeta Restaurant full bar counter with seating and sports TVs',
-    caption: 'Full Service Bar & Seating',
+    caption: 'Full Service Bar & Lounge',
     span: 'lg:col-span-2 lg:row-span-2',
-    aspect: 'aspect-[16/10]',
   },
   {
     src: '/real-gallery-storefront.jpg',
     alt: 'Gebeta Restaurant building entrance and official storefront sign at 1049 Dodd Rd',
-    caption: 'Gebeta Restaurant Storefront',
+    caption: 'Gebeta Storefront Entrance',
     span: 'lg:col-span-1 lg:row-span-2',
-    aspect: 'aspect-[3/4]',
   },
   {
-    src: '/real-gallery-dining.jpg',
+    src: '/real-gallery-dining-main.jpg',
     alt: 'Gebeta Restaurant spacious dining room with cultural ceiling artwork',
-    caption: 'Main Dining Room',
+    caption: 'Main Dining Hall',
     span: 'lg:col-span-1',
-    aspect: 'aspect-video',
   },
   {
-    src: '/real-beef-ribs.jpg',
-    alt: 'Sizzling Ethiopian beef tibs and ribs with rosemary, peppers, and onions',
-    caption: 'Sizzling Beef Tibs & Ribs',
+    src: '/real-gallery-mesob-seating.jpg',
+    alt: 'Traditional Ethiopian woven mesob dining tables and seating area',
+    caption: 'Mesob Seating Tables',
     span: 'lg:col-span-1',
-    aspect: 'aspect-video',
   },
   {
-    src: '/real-gallery-feast.jpg',
-    alt: 'Traditional Ethiopian combination platter on fresh injera with 8 stews',
-    caption: 'Ethiopian Feast Platter',
+    src: '/real-gallery-wall-art.jpg',
+    alt: 'Ethiopian cultural wall murals, artwork, and dining atmosphere',
+    caption: 'Cultural Wall Artwork',
     span: 'lg:col-span-2',
-    aspect: 'aspect-video',
   },
   {
-    src: '/real-gallery-coffee.jpg',
-    alt: 'Traditional Ethiopian Jebena coffee ceremony setup',
-    caption: 'Jebena Coffee Ceremony',
+    src: '/real-gallery-dining-view.jpg',
+    alt: 'Warm and spacious interior dining area view at Gebeta Restaurant',
+    caption: 'Interior Dining View',
     span: 'lg:col-span-2',
-    aspect: 'aspect-video',
   },
 ];
 
@@ -54,13 +48,13 @@ export default function Gallery() {
       <div className="mx-auto max-w-8xl px-5 md:px-8">
         <div className="text-center">
           <p className="text-sm font-medium uppercase tracking-[0.25em] text-gold-400">
-            Moments at Gebeta
+            Our Restaurant Space
           </p>
           <h2 className="mt-3 font-serif text-4xl font-semibold text-cream-100 md:text-5xl">
             Photo Gallery
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-cream-200/70">
-            Bright, clear, and authentic photos of our restaurant space, dining atmosphere, and signature Ethiopian dishes.
+            Bright, clear photos of our dining room, bar lounge, storefront, and traditional Ethiopian decor.
           </p>
         </div>
 
