@@ -2,6 +2,7 @@ import { useMemo, useState, useEffect } from 'react';
 import { Search, Filter, Printer, Download, Eye, Maximize2, Sparkles, CheckCircle2 } from 'lucide-react';
 import { menu, getCategoryName, RESTAURANT } from '@/data/menu';
 import { serviceOffers } from '@/data/services';
+import { useLanguage } from '@/context/LanguageContext';
 
 interface MenuPageProps {
   initialCategory?: string;
@@ -31,6 +32,7 @@ const OFFICIAL_MENU_PAGES = [
 ];
 
 export default function MenuPage({ initialCategory, onNavigate, onOpenReservation }: MenuPageProps) {
+  const { lang, t } = useLanguage();
   const [query, setQuery] = useState('');
   const [activeCat, setActiveCat] = useState<string>(initialCategory ?? 'all');
   const [activePageTab, setActivePageTab] = useState<number>(1);
@@ -44,9 +46,11 @@ export default function MenuPage({ initialCategory, onNavigate, onOpenReservatio
     const q = query.trim().toLowerCase();
     return menu.dishes.filter((d) => {
       const matchesCat = activeCat === 'all' || d.category === activeCat;
+      const nameAm = (d as any).nameAm || '';
       const matchesQuery =
         !q ||
         d.name.toLowerCase().includes(q) ||
+        nameAm.toLowerCase().includes(q) ||
         d.description.toLowerCase().includes(q);
       return matchesCat && matchesQuery;
     });
@@ -78,13 +82,16 @@ export default function MenuPage({ initialCategory, onNavigate, onOpenReservatio
         {/* Page Header */}
         <div className="text-center">
           <span className="inline-flex items-center gap-1.5 rounded-full border border-gold-600/30 bg-gold-400/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.25em] text-gold-700">
-            <Sparkles size={14} /> Official Restaurant Menu
+            <Sparkles size={14} /> {t('Official Restaurant Menu', 'ኦፊሴላዊ የሬስቶራንት ሜኑ')}
           </span>
           <h1 className="mt-3 font-serif text-4xl font-extrabold text-espresso-950 md:text-5xl lg:text-6xl">
-            Gebeta Menu
+            {t('Gebeta Menu', 'የገበታ ሜኑ')}
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-espresso-800">
-            Explore our official in-restaurant printed menu sheets below, followed by the interactive dish directory.
+            {t(
+              'Explore our official in-restaurant printed menu sheets below, followed by the interactive dish directory.',
+              'ኦፊሴላዊውን በሬስቶራንቱ ውስጥ የሚገኘውን የታተመ ሜኑ ከታች ይመልከቱ፣ በመቀጠልም ምግቦችን በዝርዝር ማሰስ ይችላሉ።'
+            )}
           </p>
 
           {/* Header Action Buttons */}
@@ -94,7 +101,7 @@ export default function MenuPage({ initialCategory, onNavigate, onOpenReservatio
               className="inline-flex items-center gap-2 rounded-full bg-gold-400 px-6 py-2.5 text-sm font-bold text-espresso-950 shadow-md transition-all hover:bg-gold-500 active:scale-95"
             >
               <Printer size={16} />
-              Export / Print PDF Menu
+              {t('Export / Print PDF Menu', 'ሜኑ በPDF ያውርዱ / ያትሙ')}
             </button>
 
             <button
@@ -102,7 +109,7 @@ export default function MenuPage({ initialCategory, onNavigate, onOpenReservatio
               className="inline-flex items-center gap-2 rounded-full border border-espresso-900/20 bg-white px-6 py-2.5 text-sm font-semibold text-espresso-900 shadow-sm transition-all hover:border-gold-400 hover:text-gold-600 active:scale-95"
             >
               <Filter size={16} />
-              Interactive Dish Directory &rarr;
+              {t('Interactive Dish Directory', 'የምግቦች ዝርዝር')} &rarr;
             </button>
           </div>
         </div>
@@ -114,7 +121,7 @@ export default function MenuPage({ initialCategory, onNavigate, onOpenReservatio
               <div className="flex items-center gap-2">
                 <CheckCircle2 size={18} className="text-gold-400" />
                 <h2 className="font-serif text-2xl font-bold text-cream-100 md:text-3xl">
-                  Official In-House Printed Menu
+                  {t('Official In-House Printed Menu', 'በሬስቶራንት ውስጥ የሚገኝ ኦፊሴላዊ ሜኑ')}
                 </h2>
               </div>
               <p className="mt-1 text-xs text-cream-200/70">
@@ -134,7 +141,7 @@ export default function MenuPage({ initialCategory, onNavigate, onOpenReservatio
                       : 'bg-cream-100/10 text-cream-200 hover:bg-cream-100/20'
                   }`}
                 >
-                  Page {page.id}
+                  {t(`Page ${page.id}`, `ገጽ ${page.id}`)}
                 </button>
               ))}
             </div>
@@ -155,7 +162,7 @@ export default function MenuPage({ initialCategory, onNavigate, onOpenReservatio
                   />
                   <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
                     <span className="inline-flex items-center gap-2 rounded-full bg-espresso-950/90 px-5 py-2.5 text-xs font-bold text-gold-400 border border-gold-400/40 backdrop-blur-md shadow-xl">
-                      <Maximize2 size={16} /> Click to View Fullscreen
+                      <Maximize2 size={16} /> {t('Click to View Fullscreen', 'በሙሉ ስክሪን ለማየት ይጫኑ')}
                     </span>
                   </div>
                 </div>
@@ -164,7 +171,7 @@ export default function MenuPage({ initialCategory, onNavigate, onOpenReservatio
                 <div className="space-y-6 lg:col-span-4">
                   <div>
                     <span className="text-xs font-bold uppercase tracking-widest text-gold-400">
-                      Menu Sheet {page.id} of 3
+                      {t(`Menu Sheet ${page.id} of 3`, `የሜኑ ገጽ ${page.id} ከ 3`)}
                     </span>
                     <h3 className="mt-1 font-serif text-xl font-bold text-cream-100">
                       {page.title}
@@ -180,7 +187,7 @@ export default function MenuPage({ initialCategory, onNavigate, onOpenReservatio
                       className="inline-flex items-center justify-center gap-2 rounded-full bg-gold-400 px-6 py-3 text-xs font-bold text-espresso-950 transition-all hover:bg-gold-300"
                     >
                       <Maximize2 size={15} />
-                      Fullscreen High-Res View
+                      {t('Fullscreen High-Res View', 'በከፍተኛ ጥራት በሙሉ ስክሪን ይዩ')}
                     </button>
                     <a
                       href={page.src}
@@ -188,13 +195,13 @@ export default function MenuPage({ initialCategory, onNavigate, onOpenReservatio
                       className="inline-flex items-center justify-center gap-2 rounded-full border border-cream-100/30 px-6 py-3 text-xs font-semibold text-cream-100 transition-all hover:border-gold-400 hover:text-gold-400"
                     >
                       <Download size={15} />
-                      Download Menu Sheet Page {page.id}
+                      {t(`Download Menu Sheet Page ${page.id}`, `የሜኑ ገጽ ${page.id} ያውርዱ`)}
                     </a>
                   </div>
 
                   {/* All 3 Thumbnail Quick Access */}
                   <div className="border-t border-cream-100/10 pt-6">
-                    <p className="text-xs font-semibold text-cream-200/60">Switch Page:</p>
+                    <p className="text-xs font-semibold text-cream-200/60">{t('Switch Page:', 'ገጽ ይቀይሩ:')}</p>
                     <div className="mt-3 grid grid-cols-3 gap-2">
                       {OFFICIAL_MENU_PAGES.map((p) => (
                         <button
@@ -227,13 +234,16 @@ export default function MenuPage({ initialCategory, onNavigate, onOpenReservatio
         <div id="digital-menu-explorer" className="mt-20 border-t border-espresso-900/10 pt-16">
           <div className="text-center">
             <span className="text-xs font-bold uppercase tracking-[0.25em] text-gold-600">
-              Interactive Directory
+              {t('Interactive Directory', 'የምግቦች ማውጫ')}
             </span>
             <h2 className="mt-2 font-serif text-3xl font-bold text-espresso-900 md:text-4xl">
-              Search &amp; Filter Dishes
+              {t('Search & Filter Dishes', 'ምግቦችን ይፈልጉ')}
             </h2>
             <p className="mx-auto mt-2 max-w-xl text-sm leading-relaxed text-espresso-700">
-              Use the search bar and category filters below to quickly find specific dishes, ingredients, and descriptions.
+              {t(
+                'Use the search bar and category filters below to quickly find specific dishes, ingredients, and descriptions.',
+                'የሚፈልጉትን ምግብ በፍጥነት ለማግኘት ከታች ያለውን መፈለጊያ ይጠቀሙ።'
+              )}
             </p>
           </div>
 
@@ -248,7 +258,7 @@ export default function MenuPage({ initialCategory, onNavigate, onOpenReservatio
                 type="search"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                placeholder="Search dishes by name or ingredient..."
+                placeholder={t('Search dishes by name or ingredient...', 'ምግቦችን በስም ወይም በቅመም ይፈልጉ...')}
                 aria-label="Search dishes by name"
                 className="w-full rounded-full border border-espresso-900/15 bg-white py-3.5 pl-12 pr-5 text-base text-espresso-900 shadow-sm outline-none transition-all placeholder:text-espresso-400 focus:border-gold-400 focus:ring-2 focus:ring-gold-400/20"
               />
@@ -266,7 +276,7 @@ export default function MenuPage({ initialCategory, onNavigate, onOpenReservatio
               }`}
             >
               <Filter size={14} />
-              All Dishes
+              {t('All Dishes', 'ሁሉም ምግቦች')}
             </button>
             {menu.categories.map((cat) => (
               <button
@@ -278,57 +288,67 @@ export default function MenuPage({ initialCategory, onNavigate, onOpenReservatio
                     : 'bg-white text-espresso-700 ring-1 ring-espresso-900/10 hover:ring-gold-400'
                 }`}
               >
-                {cat.name}
+                {lang === 'am' && (cat as any).nameAm ? (cat as any).nameAm : cat.name}
               </button>
             ))}
           </div>
 
           {/* Dish List Grid */}
           <div className="mt-12 space-y-16 pb-20">
-            {grouped.map(({ cat, dishes }) => (
-              <section key={cat} className="space-y-6">
-                <div className="border-b border-espresso-900/10 pb-3">
-                  <h3 className="font-serif text-2xl font-bold text-espresso-900 md:text-3xl">
-                    {getCategoryName(cat)}
-                  </h3>
-                  <p className="mt-1 text-sm text-espresso-600">
-                    {menu.categories.find((c) => c.id === cat)?.description}
-                  </p>
-                </div>
+            {grouped.map(({ cat, dishes }) => {
+              const catObj = menu.categories.find((c) => c.id === cat);
+              const catTitle = lang === 'am' && (catObj as any)?.nameAm ? (catObj as any).nameAm : getCategoryName(cat);
 
-                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                  {dishes.map((dish) => (
-                    <article
-                      key={dish.id}
-                      className="flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-espresso-900/5 transition-all hover:shadow-md print:shadow-none print:ring-1 print:ring-gray-300"
-                    >
-                      {dish.image && (
-                        <div className="aspect-[4/3] overflow-hidden print:hidden">
-                          <img
-                            src={dish.image}
-                            alt={dish.name}
-                            loading="lazy"
-                            className="h-full w-full object-cover"
-                          />
-                        </div>
-                      )}
-                      <div className="flex flex-1 flex-col p-6">
-                        <h4 className="font-serif text-xl font-semibold text-espresso-900">
-                          {dish.name}
-                        </h4>
-                        <p className="mt-2 flex-1 text-sm leading-relaxed text-espresso-600">
-                          {dish.description}
-                        </p>
-                      </div>
-                    </article>
-                  ))}
-                </div>
-              </section>
-            ))}
+              return (
+                <section key={cat} className="space-y-6">
+                  <div className="border-b border-espresso-900/10 pb-3">
+                    <h3 className="font-serif text-2xl font-bold text-espresso-900 md:text-3xl">
+                      {catTitle}
+                    </h3>
+                    <p className="mt-1 text-sm text-espresso-600">
+                      {catObj?.description}
+                    </p>
+                  </div>
+
+                  <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                    {dishes.map((dish) => {
+                      const dishTitle = lang === 'am' && (dish as any).nameAm ? (dish as any).nameAm : dish.name;
+
+                      return (
+                        <article
+                          key={dish.id}
+                          className="flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-espresso-900/5 transition-all hover:shadow-md print:shadow-none print:ring-1 print:ring-gray-300"
+                        >
+                          {/* Uncropped Dish Picture Container */}
+                          {dish.image && (
+                            <div className="relative aspect-[4/3] w-full overflow-hidden bg-espresso-950/5 p-2 print:hidden">
+                              <img
+                                src={dish.image}
+                                alt={dishTitle}
+                                loading="lazy"
+                                className="h-full w-full object-contain"
+                              />
+                            </div>
+                          )}
+                          <div className="flex flex-1 flex-col p-6">
+                            <h4 className="font-serif text-xl font-semibold text-espresso-900">
+                              {dishTitle}
+                            </h4>
+                            <p className="mt-2 flex-1 text-sm leading-relaxed text-espresso-600">
+                              {dish.description}
+                            </p>
+                          </div>
+                        </article>
+                      );
+                    })}
+                  </div>
+                </section>
+              );
+            })}
 
             {filtered.length === 0 && (
               <div className="py-16 text-center">
-                <p className="text-lg font-medium text-espresso-800">No dishes match your search.</p>
+                <p className="text-lg font-medium text-espresso-800">{t('No dishes match your search.', 'ምንም የተገኘ ምግብ የለም።')}</p>
                 <button
                   onClick={() => {
                     setQuery('');
@@ -336,48 +356,12 @@ export default function MenuPage({ initialCategory, onNavigate, onOpenReservatio
                   }}
                   className="mt-4 rounded-full bg-gold-400 px-6 py-2.5 text-sm font-semibold text-espresso-950"
                 >
-                  Clear Search &amp; Filters
+                  {t('Clear Search & Filters', 'መፈለጊያውን ያጽዱ')}
                 </button>
               </div>
             )}
           </div>
         </div>
-
-        {/* Services Quick Bar */}
-        <section className="border-t border-espresso-900/10 py-16 print:hidden">
-          <div className="text-center">
-            <h3 className="font-serif text-2xl font-bold text-espresso-900 md:text-3xl">
-              Order, Delivery &amp; Catering
-            </h3>
-            <p className="mt-2 text-sm text-espresso-600">
-              Enjoy Gebeta at home or let us cater your next gathering.
-            </p>
-
-            <div className="mt-8 grid gap-4 sm:grid-cols-3">
-              {serviceOffers.map((item) => (
-                <div
-                  key={item.id}
-                  className="rounded-2xl bg-white p-6 text-left shadow-sm ring-1 ring-espresso-900/5"
-                >
-                  <h4 className="font-serif text-lg font-semibold text-espresso-900">
-                    {item.title}
-                  </h4>
-                  <p className="mt-2 text-xs leading-relaxed text-espresso-600">
-                    {item.description}
-                  </p>
-                  <a
-                    href={item.ctaHref}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-gold-600 hover:text-gold-700"
-                  >
-                    {item.ctaText} &rarr;
-                  </a>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
       </div>
 
