@@ -85,7 +85,8 @@
       "category": "tibs",
       "price": 21.99,
       "description": "Yabera Lega Tibs is a premier Ethiopian beef dish known for its tender texture and mild, savory flavor. Flash-fried quickly to keep the meat incredibly juicy.",
-      "image": "/real-beef-ribs.jpg"
+      "image": "/real-beef-ribs.jpg",
+      "featured": true
     },
     {
       "id": "chekina-tibs",
@@ -175,7 +176,9 @@
       "nameAm": "የቋንጣ ፍርፍር",
       "category": "firfir",
       "price": 18.99,
-      "description": "A savory Ethiopian breakfast dish of diced dried beef (quanta) simmered in a spicy, butter-based sauce (berbere and kibbeh) and mixed with shredded injera."
+      "description": "A savory Ethiopian breakfast dish of diced dried beef (quanta) simmered in a spicy, butter-based sauce (berbere and kibbeh) and mixed with shredded injera.",
+      "image": "/real-firfir-dish.jpg",
+      "featured": true
     },
     {
       "id": "bozena-shiro",
