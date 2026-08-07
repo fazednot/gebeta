@@ -3,6 +3,7 @@ import { Search, Filter, Printer, Download, Eye, Maximize2, Sparkles, CheckCircl
 import { menu, getCategoryName, RESTAURANT } from '@/data/menu';
 import { serviceOffers } from '@/data/services';
 import { useLanguage } from '@/context/LanguageContext';
+import { useCart } from '@/context/CartContext';
 
 interface MenuPageProps {
   initialCategory?: string;
@@ -33,6 +34,7 @@ const OFFICIAL_MENU_PAGES = [
 
 export default function MenuPage({ initialCategory, onNavigate, onOpenReservation }: MenuPageProps) {
   const { lang, t } = useLanguage();
+  const { addToCart } = useCart();
   const [query, setQuery] = useState('');
   const [activeCat, setActiveCat] = useState<string>(initialCategory ?? 'all');
   const [activePageTab, setActivePageTab] = useState<number>(1);
@@ -337,6 +339,24 @@ export default function MenuPage({ initialCategory, onNavigate, onOpenReservatio
                             <p className="mt-2 flex-1 text-sm leading-relaxed text-espresso-600">
                               {dish.description}
                             </p>
+                            <div className="mt-4 flex items-center justify-between border-t border-espresso-900/10 pt-4 print:hidden">
+                              <span className="text-lg font-bold text-gold-600">
+                                ${dish.price?.toFixed(2) || '0.00'}
+                              </span>
+                              <button
+                                onClick={() =>
+                                  addToCart({
+                                    id: dish.id,
+                                    name: dish.name,
+                                    nameAm: (dish as any).nameAm,
+                                    price: dish.price || 0,
+                                  })
+                                }
+                                className="inline-flex items-center gap-1.5 rounded-full bg-espresso-900 px-4 py-2 text-xs font-bold text-cream-100 transition-colors hover:bg-gold-400 hover:text-espresso-950"
+                              >
+                                {t('Add to Cart', 'ወደ ቅርጫት')}
+                              </button>
+                            </div>
                           </div>
                         </article>
                       );

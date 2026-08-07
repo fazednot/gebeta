@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
-import { Menu, X, Phone, CalendarDays, Globe } from 'lucide-react';
+import { Menu, X, Phone, CalendarDays, Globe, ShoppingCart } from 'lucide-react';
 import { RESTAURANT } from '@/data/menu';
 import { useLanguage } from '@/context/LanguageContext';
+import { useCart } from '@/context/CartContext';
 
 interface NavbarProps {
   currentPath: string;
@@ -13,6 +14,7 @@ export default function Navbar({ currentPath, onNavigate, onOpenReservation }: N
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const { lang, toggleLang, t } = useLanguage();
+  const { totalItems, setIsCartOpen } = useCart();
 
   const links = [
     { label: t('Home', 'መነሻ'), path: '/' },
@@ -73,6 +75,19 @@ export default function Navbar({ currentPath, onNavigate, onOpenReservation }: N
         </ul>
 
         <div className="hidden items-center gap-3 md:flex">
+          <button
+            onClick={() => setIsCartOpen(true)}
+            className="relative inline-flex items-center justify-center rounded-full p-2 text-cream-100 transition-colors hover:bg-gold-400/20 hover:text-gold-400"
+            aria-label="View Cart"
+          >
+            <ShoppingCart size={22} />
+            {totalItems > 0 && (
+              <span className="absolute -right-1 -top-1 flex h-5 w-5 items-center justify-center rounded-full bg-gold-400 text-[10px] font-bold text-espresso-950">
+                {totalItems}
+              </span>
+            )}
+          </button>
+
           {/* Language Toggle Button */}
           <button
             onClick={toggleLang}
@@ -101,6 +116,19 @@ export default function Navbar({ currentPath, onNavigate, onOpenReservation }: N
 
         {/* Mobile controls */}
         <div className="flex items-center gap-3 md:hidden">
+          <button
+            onClick={() => setIsCartOpen(true)}
+            className="relative inline-flex items-center justify-center rounded-full p-2 text-gold-400"
+            aria-label="View Cart"
+          >
+            <ShoppingCart size={22} />
+            {totalItems > 0 && (
+              <span className="absolute -right-1 -top-1 flex h-5 w-5 items-center justify-center rounded-full bg-gold-400 text-[10px] font-bold text-espresso-950">
+                {totalItems}
+              </span>
+            )}
+          </button>
+
           <button
             onClick={toggleLang}
             className="inline-flex items-center gap-1 rounded-full border border-gold-400/40 bg-cream-100/10 px-3 py-1.5 text-xs font-bold text-gold-400"

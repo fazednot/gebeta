@@ -6,6 +6,8 @@ import ReservationModal from '@/components/ReservationModal';
 import HomePage from '@/pages/HomePage';
 import MenuPage from '@/pages/MenuPage';
 import { LanguageProvider } from '@/context/LanguageContext';
+import { CartProvider } from '@/context/CartContext';
+import CartDrawer from '@/components/CartDrawer';
 
 function parsePath(): string {
   const hash = window.location.hash.replace(/^#/, '');
@@ -52,13 +54,16 @@ export default function App() {
 
   return (
     <LanguageProvider>
-      <div className="min-h-screen bg-cream-100 font-sans text-espresso-900 antialiased">
-        <Navbar currentPath={basePath} onNavigate={navigate} onOpenReservation={openReservation} />
-        <main>{page}</main>
-        <Footer onNavigate={navigate} onOpenReservation={openReservation} />
-        <ScrollManager path={path} />
-        <ReservationModal open={reservationOpen} onClose={closeReservation} />
-      </div>
+      <CartProvider>
+        <div className="min-h-screen bg-cream-100 font-sans text-espresso-900 antialiased">
+          <Navbar currentPath={basePath} onNavigate={navigate} onOpenReservation={openReservation} />
+          <main>{page}</main>
+          <Footer onNavigate={navigate} onOpenReservation={openReservation} />
+          <ScrollManager path={path} />
+          <ReservationModal open={reservationOpen} onClose={closeReservation} />
+          <CartDrawer />
+        </div>
+      </CartProvider>
     </LanguageProvider>
   );
 }

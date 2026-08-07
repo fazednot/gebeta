@@ -1,6 +1,7 @@
 import { ArrowRight } from 'lucide-react';
 import { menu } from '@/data/menu';
 import { useLanguage } from '@/context/LanguageContext';
+import { useCart } from '@/context/CartContext';
 
 interface FeaturedDishesProps {
   onNavigate?: (path: string) => void;
@@ -8,6 +9,7 @@ interface FeaturedDishesProps {
 
 export default function FeaturedDishes({ onNavigate }: FeaturedDishesProps) {
   const { lang, t } = useLanguage();
+  const { addToCart } = useCart();
   const dishes = menu.dishes.filter((d) => d.featured).slice(0, 6);
 
   return (
@@ -43,11 +45,29 @@ export default function FeaturedDishes({ onNavigate }: FeaturedDishesProps) {
                   className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
-              <div className="p-6">
+              <div className="flex flex-1 flex-col p-6">
                 <h3 className="font-serif text-xl font-semibold text-espresso-900">
                   {lang === 'am' && (dish as any).nameAm ? (dish as any).nameAm : dish.name}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-espresso-600">{dish.description}</p>
+                <p className="mt-2 flex-1 text-sm leading-relaxed text-espresso-600">{dish.description}</p>
+                <div className="mt-4 flex items-center justify-between border-t border-espresso-900/10 pt-4">
+                  <span className="text-lg font-bold text-gold-600">
+                    ${dish.price?.toFixed(2) || '0.00'}
+                  </span>
+                  <button
+                    onClick={() =>
+                      addToCart({
+                        id: dish.id,
+                        name: dish.name,
+                        nameAm: (dish as any).nameAm,
+                        price: dish.price || 0,
+                      })
+                    }
+                    className="inline-flex items-center gap-1.5 rounded-full bg-espresso-900 px-4 py-2 text-xs font-bold text-cream-100 transition-colors hover:bg-gold-400 hover:text-espresso-950"
+                  >
+                    {t('Add to Cart', 'ወደ ቅርጫት')}
+                  </button>
+                </div>
               </div>
             </article>
           ))}
