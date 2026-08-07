@@ -1,271 +1,386 @@
 {
   "categories": [
     {
-      "id": "traditional",
-      "name": "Traditional Dishes",
-      "nameAm": "ባህላዊ ምግቦች",
-      "description": "Classic Ethiopian combination platters served on injera with a variety of stews and salads."
-    },
-    {
-      "id": "vegetarian",
-      "name": "Vegetarian / Fasting",
-      "nameAm": "የጾም / አትክልት",
-      "description": "Plant-based dishes perfect for fasting days — rich lentils, split peas, and vegetables."
+      "id": "appetizers",
+      "name": "Appetizers",
+      "nameAm": "መክሰስ",
+      "description": "Starters and snacks to begin your Ethiopian culinary journey."
     },
     {
       "id": "tibs",
-      "name": "Tibs",
+      "name": "Tibs (Sautéed Meats)",
       "nameAm": "ጥብስ",
-      "description": "Sautéed meat with onions, peppers, and berbere spice, served sizzling."
+      "description": "Premium meats sautéed with onions, jalapeños, rosemary, and authentic Ethiopian spices."
     },
     {
       "id": "kitfo",
       "name": "Kitfo",
       "nameAm": "ክትፎ",
-      "description": "Minced raw or rare beef seasoned with mitmita and niter kibbeh — an Ethiopian delicacy."
+      "description": "Traditional Ethiopian delicacy of seasoned, minced beef, served with authentic cheeses and spices."
     },
     {
       "id": "firfir",
-      "name": "Firfir",
-      "nameAm": "ፍርፍር",
-      "description": "Shredded injera simmered with spicy berbere sauce and your choice of meat or vegetables."
+      "name": "Firfir & Traditional",
+      "nameAm": "ፍርፍር እና ባህላዊ",
+      "description": "Classic dishes featuring injera soaked in rich, spiced stews and flavorful sauces."
     },
     {
-      "id": "breakfast",
-      "name": "Breakfast",
-      "nameAm": "ቁርስ",
-      "description": "Hearty Ethiopian breakfast dishes to start your day with warmth and spice."
+      "id": "vegetarian",
+      "name": "Vegetarian & Vegan",
+      "nameAm": "የጾም / አትክልት",
+      "description": "Plant-based dishes perfect for fasting days — rich lentils, split peas, and fresh vegetables."
     },
     {
-      "id": "drinks",
-      "name": "Drinks",
-      "nameAm": "መጠጦች",
-      "description": "Traditional Ethiopian coffee, teas, and refreshing beverages."
+      "id": "pasta",
+      "name": "Pasta & Fusion",
+      "nameAm": "ፓስታ",
+      "description": "Ethiopian-Italian fusion dishes with rich, spiced tomato sauces."
     },
     {
-      "id": "desserts",
-      "name": "Desserts",
-      "nameAm": "ማጣፈጫዎች",
-      "description": "Sweet finishes to complete your Ethiopian dining experience."
+      "id": "kids",
+      "name": "Kids Menu",
+      "nameAm": "የልጆች ምግቦች",
+      "description": "Mild and kid-friendly favorites for our younger guests."
+    },
+    {
+      "id": "hot-drinks",
+      "name": "Hot Drinks & Coffee",
+      "nameAm": "ትኩስ መጠጦች እና ቡና",
+      "description": "Experience the traditional Ethiopian coffee ceremony and aromatic spiced teas."
+    },
+    {
+      "id": "cold-drinks",
+      "name": "Juices & Soft Drinks",
+      "nameAm": "ጭማቂ እና ለስላሳ መጠጦች",
+      "description": "Refreshing juices, waters, and sodas."
+    },
+    {
+      "id": "wines",
+      "name": "Wines",
+      "nameAm": "ወይኖች",
+      "description": "A curated selection of red and white wines to complement your meal."
     }
   ],
   "dishes": [
     {
-      "id": "veggie-combo",
-      "name": "Vegetarian Combo (Beyaynetu)",
-      "nameAm": "የጾም በያይነቱ",
-      "category": "traditional",
-      "price": 16.99,
-      "description": "A colorful platter of misir wot, kik wot, gomen, atakilt, and shiro — five vegetarian stews on a bed of injera.",
-      "image": "/photo-fasting-platter.jpg",
-      "featured": true
+      "id": "kategna",
+      "name": "Kategna",
+      "nameAm": "ቃተኛ",
+      "category": "appetizers",
+      "price": 3.99,
+      "description": "A popular Ethiopian dish made by toasting a piece of flatbread and coating it in a spiced butter and chili mixture."
     },
     {
-      "id": "beef-tibs",
-      "name": "Sega Tibs",
-      "nameAm": "ሥጋ ጥብስ",
+      "id": "lentil-sambusas",
+      "name": "Lentil Sambusas",
+      "nameAm": "ሳምቡሳ",
+      "category": "appetizers",
+      "price": 4.99,
+      "description": "(Ye Misir Sambusa) Golden, crispy pastry triangles packed with a savory, aromatically spiced lentil filling with garlic, ginger, jalapeños, and warm spices."
+    },
+    {
+      "id": "lega-tibs",
+      "name": "Lega Tibs",
+      "nameAm": "ለጋ ጥብስ",
       "category": "tibs",
-      "price": 17.99,
-      "description": "Tender cubed beef sautéed with onions, jalapeños, rosemary, and niter kibbeh, served sizzling on injera.",
-      "image": "/real-beef-ribs.jpg",
-      "featured": true
+      "price": 21.99,
+      "description": "Yabera Lega Tibs is a premier Ethiopian beef dish known for its tender texture and mild, savory flavor. Flash-fried quickly to keep the meat incredibly juicy.",
+      "image": "/real-beef-ribs.jpg"
+    },
+    {
+      "id": "chekina-tibs",
+      "name": "Chekina Tibs",
+      "nameAm": "ጭከና ጥብስ",
+      "category": "tibs",
+      "price": 21.99,
+      "description": "A traditional Ethiopian dish of cubed beef or lamb, seared with niter kibbeh (spiced clarified butter), onions, garlic, ginger, and rosemary. Served on a heated clay pot."
+    },
+    {
+      "id": "geba-weta",
+      "name": "Geba Weta",
+      "nameAm": "ገባ ወጣ",
+      "category": "tibs",
+      "price": 21.99,
+      "description": "A fast-paced Ethiopian dish featuring bite-sized tenderloin or sirloin steak cooked medium-rare alongside onions, jalapeños, rosemary, and savory spices."
+    },
+    {
+      "id": "beef-hot-grilled",
+      "name": "Beef Hot Grilled",
+      "nameAm": "የበሬ ሸክላ ጥብስ ዝልዝል",
+      "category": "tibs",
+      "price": 21.99,
+      "description": "(Shekla Tibs) A sizzling, aromatic Ethiopian dish featuring juicy beef chunks seared with Niter Kibbeh, red onions, jalapeños, and traditional spices."
+    },
+    {
+      "id": "yabera-lega-tibs",
+      "name": "Yabera Lega Tibs",
+      "nameAm": "የበሬ ለጋ ጥብስ",
+      "category": "tibs",
+      "price": 18.99,
+      "description": "A premier Ethiopian beef dish known for its tender texture and mild, savory flavor. Flash-fried quickly to keep the meat incredibly juicy."
+    },
+    {
+      "id": "beef-ribs",
+      "name": "Beef Ribs",
+      "nameAm": "የጎድን ጥብስ",
+      "category": "tibs",
+      "price": 33.99,
+      "description": "Ethiopian beef short ribs, served as Derek Tibs (dry) or braised with berbere, are savory, spicy, and tenderized with spiced butter (kibe)."
+    },
+    {
+      "id": "gaslight-tibs",
+      "name": "Gaslight Tibs",
+      "nameAm": "ጋዝ ላይት ጥብስ",
+      "category": "tibs",
+      "price": 18.99,
+      "description": "Meat quickly seared over extreme heat with onions, jalapeños, rosemary, and kibe (spiced butter), finished with a touch of red wine and berbere."
     },
     {
       "id": "kitfo-special",
-      "name": "Gaslight",
-      "nameAm": "ጋስላይት",
+      "name": "Gaslight (Special Kitfo)",
+      "nameAm": "ልዩ ክትፎ (ጋስላይት)",
       "category": "kitfo",
-      "price": 21.99,
-      "description": "Hand-minced lean beef warmed in spiced clarified butter and mitmita, served with ayib cheese and gomen greens.",
+      "price": 25.99,
+      "description": "Hand-diced tender beef round prepared in front of you, mixed with freshly ground cardamom, Ethiopian purified butter, and spiced hot chili powder. Served with cheeses.",
       "image": "/photo-kitfo-minced.jpg",
       "featured": true
     },
     {
-      "id": "firfir-beef",
-      "name": "Beef Firfir",
-      "nameAm": "የሥጋ ፍርፍር",
-      "category": "firfir",
-      "price": 15.99,
-      "description": "Shredded injera simmered in spicy berbere sauce with tender beef, served with fresh ayib cheese.",
-      "image": "/real-firfir-dish.jpg",
-      "featured": true
-    },
-    {
-      "id": "shiro",
-      "name": "Shiro Wot",
-      "nameAm": "ሺሮ ወጥ",
-      "category": "vegetarian",
-      "price": 13.99,
-      "description": "Smooth, creamy chickpea flour stew slow-cooked with garlic, onion, and berbere spice."
-    },
-    {
-      "id": "kik-wot",
-      "name": "Kik Wot",
-      "nameAm": "ክክ ወጥ",
-      "category": "vegetarian",
-      "price": 12.99,
-      "description": "Yellow split peas simmered in a mild, golden turmeric sauce with onions and garlic."
-    },
-    {
-      "id": "misir-wot",
-      "name": "Misir Wot",
-      "nameAm": "ምስር ወጥ",
-      "category": "vegetarian",
-      "price": 12.99,
-      "description": "Red lentils cooked in spicy berbere sauce — a fasting favorite rich in protein and flavor."
-    },
-    {
-      "id": "gomen",
-      "name": "Gomen",
-      "nameAm": "ጎመን",
-      "category": "vegetarian",
-      "price": 12.99,
-      "description": "Collard greens slow-cooked with garlic, ginger, and green chili until tender and aromatic."
-    },
-    {
-      "id": "atakilt",
-      "name": "Atakilt",
-      "nameAm": "አትክልት",
-      "category": "vegetarian",
-      "price": 12.99,
-      "description": "A mild cabbage, carrot, and potato stew seasoned with turmeric and garlic."
-    },
-    {
-      "id": "lamb-tibs",
-      "name": "Lamb Tibs",
-      "nameAm": "የበግ ጥብስ",
-      "category": "tibs",
-      "price": 18.99,
-      "description": "Succulent lamb pieces sautéed with onions, peppers, and rosemary in niter kibbeh."
-    },
-    {
-      "id": "fish-tibs",
-      "name": "Fish Tibs",
-      "nameAm": "የዓሣ ጥብስ",
-      "category": "tibs",
-      "price": 19.99,
-      "description": "Fresh tilapia sautéed with onions, tomatoes, and jalapeños in a light berbere sauce."
-    },
-    {
-      "id": "key-wot",
-      "name": "Key Wot",
-      "nameAm": "ቀይ ወጥ",
-      "category": "tibs",
-      "price": 17.99,
-      "description": "Cubed beef simmered in a deep red berbere sauce with onions and garlic until tender."
-    },
-    {
-      "id": "kitfo-tibs",
-      "name": "Kitfo Tibs",
-      "nameAm": "ክትፎ ጥብስ",
+      "id": "tebit-kitffo",
+      "name": "Tebit Kitffo",
+      "nameAm": "ትዕቢት ክትፎ",
       "category": "kitfo",
-      "price": 22.99,
-      "description": "Minced beef lightly sautéed with mitmita, niter kibbeh, and herbs — a cross between kitfo and tibs."
+      "price": 21.99,
+      "description": "Lean ground beef seasoned and cooked with cardamom, spicy chili powder, onions, jalapeño, and Ethiopian herbal butter."
     },
     {
       "id": "gored-gored",
       "name": "Gored Gored",
       "nameAm": "ጎረድ ጎረድ",
       "category": "kitfo",
-      "price": 23.99,
-      "description": "Cubed raw beef marinated in mitmita and spiced niter kibbeh, served with ayib cheese."
+      "price": 19.99,
+      "description": "A popular Ethiopian dish consisting of cubed, raw beef (typically tenderloin) tossed in niter kibbeh (spiced clarified butter) and mitmita (hot chili powder blend)."
     },
     {
-      "id": "firfir-veggie",
-      "name": "Vegetarian Firfir",
-      "nameAm": "የጾም ፍርፍር",
-      "category": "firfir",
-      "price": 13.99,
-      "description": "Shredded injera simmered in spicy berbere sauce with onions and peppers — fully plant-based."
+      "id": "raw-meat",
+      "name": "Raw Meat",
+      "nameAm": "ጥሬ ሥጋ",
+      "category": "kitfo",
+      "price": 39.99,
+      "description": "Kurt (ቁርጥ) also called Tire Siga (ጥሬ ስጋ) is a flavorful Ethiopian raw meat delicacy served with spicy condiments."
     },
     {
-      "id": "firfir-kitfo",
-      "name": "Kitfo Firfir",
-      "nameAm": "የክትፎ ፍርፍር",
+      "id": "quanta-firfir",
+      "name": "Quanta Firfir",
+      "nameAm": "የቋንጣ ፍርፍር",
       "category": "firfir",
       "price": 18.99,
-      "description": "Shredded injera with spicy berbere sauce topped with seasoned minced beef."
+      "description": "A savory Ethiopian breakfast dish of diced dried beef (quanta) simmered in a spicy, butter-based sauce (berbere and kibbeh) and mixed with shredded injera."
     },
     {
-      "id": "ful",
-      "name": "Ful",
-      "nameAm": "ፉል",
-      "category": "breakfast",
+      "id": "bozena-shiro",
+      "name": "Bozena Shiro",
+      "nameAm": "ቦዘና ሽሮ",
+      "category": "firfir",
+      "price": 18.99,
+      "description": "A popular, comforting dish combining traditional spiced chickpea stew (shiro) with tender cubes of sautéed beef or lamb (tibs)."
+    },
+    {
+      "id": "fish-goulash",
+      "name": "Fish Goulash",
+      "nameAm": "ዓሣ ጉላሽ",
+      "category": "firfir",
+      "price": 18.99,
+      "description": "Asa Goulash (Ye'assa Wat) is a beloved and vibrant dish combining crispy, pan-fried fish simmered in a rich, spicy, and citrusy tomato sauce."
+    },
+    {
+      "id": "veggie-combo",
+      "name": "Veggie Combo",
+      "nameAm": "በያይነቱ",
+      "category": "vegetarian",
+      "price": 19.99,
+      "description": "Combination of Vegetarian dishes: Yemisir Wat, Kik Alicha, Debelek Atekelete, Misir Azifa, Shiro, Gomen, Elebete, Salad, Beetroot.",
+      "image": "/photo-fasting-platter.jpg",
+      "featured": true
+    },
+    {
+      "id": "pasta",
+      "name": "Pasta",
+      "nameAm": "ፓስታ",
+      "category": "pasta",
+      "price": 15.99,
+      "description": "This Ethiopian pasta recipe features a fragrant, spicy tomato sauce (sils) enhanced with aromatic berbere spice, onions, garlic, and ginger."
+    },
+    {
+      "id": "kids-nugget",
+      "name": "Chicken Nugget (Kids)",
+      "nameAm": "የልጆች ዶሮ",
+      "category": "kids",
+      "price": 7.99,
+      "description": "Crispy chicken nuggets served for kids."
+    },
+    {
+      "id": "kids-spaghetti",
+      "name": "Spaghetti (Kids)",
+      "nameAm": "የልጆች ስፓጌቲ",
+      "category": "kids",
       "price": 11.99,
-      "description": "Slow-cooked fava beans with onion, tomato, green chili, and a drizzle of olive oil."
+      "description": "Classic spaghetti for kids."
     },
     {
-      "id": "fata",
-      "name": "Fata",
-      "nameAm": "ፋታ",
-      "category": "breakfast",
-      "price": 11.99,
-      "description": "Torn injera simmered in spicy tomato sauce with onions and berbere — a warming breakfast bowl."
+      "id": "ethiopian-tea",
+      "name": "Ethiopian Tea",
+      "nameAm": "የኢትዮጵያ ሻይ",
+      "category": "hot-drinks",
+      "price": 3.55,
+      "description": "Warm, spiced Ethiopian tea."
     },
     {
-      "id": "kinche",
-      "name": "Kinche",
-      "nameAm": "ቅንጬ",
-      "category": "breakfast",
-      "price": 10.99,
-      "description": "Cracked wheat cooked with niter kibbeh and onions — a comforting, mild Ethiopian porridge."
+      "id": "ginger-tea",
+      "name": "Ginger Tea",
+      "nameAm": "የዝንጅብል ሻይ",
+      "category": "hot-drinks",
+      "price": 3.55,
+      "description": "Soothing, fresh ginger tea."
     },
     {
       "id": "ethiopian-coffee",
-      "name": "Ethiopian Coffee Ceremony",
-      "nameAm": "የኢትዮጵያ ቡና ሥነ-ሥርዓት",
-      "category": "drinks",
-      "price": 6.99,
-      "description": "Freshly roasted and brewed Yirgacheffe coffee, served in a traditional jebena with popcorn.",
+      "name": "Ethiopian Coffee",
+      "nameAm": "የኢትዮጵያ ቡና",
+      "category": "hot-drinks",
+      "price": 3.55,
+      "description": "A classic cup of freshly brewed Ethiopian coffee."
+    },
+    {
+      "id": "jebena-coffee-1",
+      "name": "Jebena Coffee (1 Person)",
+      "nameAm": "ጀበና ቡና (ለ1 ሰው)",
+      "category": "hot-drinks",
+      "price": 5.85,
+      "description": "Traditional coffee brewed in a clay jebena pot for one."
+    },
+    {
+      "id": "jebena-coffee-2",
+      "name": "Jebena Coffee (2 Persons)",
+      "nameAm": "ጀበና ቡና (ለ2 ሰዎች)",
+      "category": "hot-drinks",
+      "price": 9.95,
+      "description": "Traditional coffee brewed in a clay jebena pot, perfect for sharing."
+    },
+    {
+      "id": "jebena-ceremony",
+      "name": "Jebena Coffee Full Ceremony",
+      "nameAm": "የቡና ሥነ-ሥርዓት",
+      "category": "hot-drinks",
+      "price": 13.95,
+      "description": "Experience the full, traditional Ethiopian coffee roasting and brewing ceremony.",
       "image": "/photo-coffee-ceremony.jpg"
     },
     {
-      "id": "spiced-tea",
-      "name": "Spiced Tea",
-      "nameAm": "የቅመም ሻይ",
-      "category": "drinks",
-      "price": 3.99,
-      "description": "Black tea steeped with cinnamon, cardamom, and cloves — warming and aromatic."
+      "id": "apple-juice",
+      "name": "Apple Juice",
+      "nameAm": "የፖም ጭማቂ",
+      "category": "cold-drinks",
+      "price": 3.75,
+      "description": "Refreshing apple juice."
     },
     {
-      "id": "tej",
-      "name": "Tej (Honey Wine)",
-      "nameAm": "ጠጅ (የማር ወይን)",
-      "category": "drinks",
-      "price": 7.99,
-      "description": "Traditional Ethiopian honey wine, naturally fermented and lightly sweet."
+      "id": "orange-juice",
+      "name": "Orange Juice",
+      "nameAm": "የብርቱካን ጭማቂ",
+      "category": "cold-drinks",
+      "price": 3.99,
+      "description": "Fresh orange juice."
+    },
+    {
+      "id": "milk",
+      "name": "Milk",
+      "nameAm": "ወተት",
+      "category": "cold-drinks",
+      "price": 2.99,
+      "description": "Cold, fresh milk."
+    },
+    {
+      "id": "bottle-water",
+      "name": "Bottle of Water",
+      "nameAm": "የታሸገ ውኃ",
+      "category": "cold-drinks",
+      "price": 2.99,
+      "description": "Purified bottled water."
     },
     {
       "id": "sparkling-water",
       "name": "Sparkling Water",
       "nameAm": "የጋዝ ውኃ",
-      "category": "drinks",
+      "category": "cold-drinks",
+      "price": 3.99,
+      "description": "Refreshing sparkling water."
+    },
+    {
+      "id": "ambo-water",
+      "name": "Ethiopia's Ambo Water",
+      "nameAm": "አምቦ ውኃ",
+      "category": "cold-drinks",
+      "price": 4.99,
+      "description": "Ethiopia's famous naturally carbonated mineral water."
+    },
+    {
+      "id": "fanta",
+      "name": "Fanta Orange",
+      "nameAm": "ፋንታ",
+      "category": "cold-drinks",
+      "price": 3.99,
+      "description": "Classic orange soda."
+    },
+    {
+      "id": "soda",
+      "name": "Coca-Cola, Sprite, Pepsi",
+      "nameAm": "ለስላሳ",
+      "category": "cold-drinks",
       "price": 2.99,
-      "description": "Chilled sparkling mineral water with a slice of lemon."
+      "description": "Assorted sodas."
     },
     {
-      "id": "dabo-kolo",
-      "name": "Dabo Kolo",
-      "nameAm": "ዳቦ ቆሎ",
-      "category": "desserts",
+      "id": "wine-cabernet",
+      "name": "Canyon Road Cabernet Sauvignon",
+      "category": "wines",
       "price": 5.99,
-      "description": "Crunchy, lightly sweet roasted bites of wheat dough — a classic Ethiopian snack and dessert."
+      "description": "Cabernet Sauvignon from California."
     },
     {
-      "id": "honey-cake",
-      "name": "Honey Cake",
-      "nameAm": "የማር ኬክ",
-      "category": "desserts",
-      "price": 6.99,
-      "description": "Soft, moist cake sweetened with Ethiopian honey and a hint of cardamom."
+      "id": "wine-chardonnay",
+      "name": "Canyon Road Chardonnay",
+      "category": "wines",
+      "price": 5.99,
+      "description": "Chardonnay from California."
     },
     {
-      "id": "fresh-fruit",
-      "name": "Fresh Fruit Platter",
-      "nameAm": "የፍራፍሬ በያይነቱ",
-      "category": "desserts",
-      "price": 7.99,
-      "description": "Seasonal tropical fruits — mango, papaya, banana, and pineapple — beautifully arranged."
+      "id": "wine-pinot-noir",
+      "name": "Mark West Pinot Noir",
+      "category": "wines",
+      "price": 8.99,
+      "description": "Pinot Noir from California."
+    },
+    {
+      "id": "wine-sauvignon-blanc",
+      "name": "Stoneleigh Sauvignon Blanc",
+      "category": "wines",
+      "price": 11.99,
+      "description": "Sauvignon Blanc from Marlborough."
+    },
+    {
+      "id": "wine-merlot",
+      "name": "Murphy Goode Merlot",
+      "category": "wines",
+      "price": 8.99,
+      "description": "Merlot from California."
+    },
+    {
+      "id": "wine-pinot-grigio",
+      "name": "Ecco Domani Pinot Grigio",
+      "category": "wines",
+      "price": 8.99,
+      "description": "Delle Venezie Pinot Grigio Collezione."
     }
   ]
 }
